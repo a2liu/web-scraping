@@ -1,0 +1,2712 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   deribit-notify
+  </title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="" name="description"/>
+  <meta content="GitBook 3.2.3" name="generator"/>
+  <link href="./../assets/deribit-notify_files/style.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-notify_files/website.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-notify_files/search.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-notify_files/website(1).css" rel="stylesheet"/>
+  <link href="./../assets/deribit-notify_files/theme-api.css" rel="stylesheet"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://docs.deribit.com/gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="https://docs.deribit.com/gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="./deribit-errors.html" rel="prev"/>
+ </head>
+ <body>
+  <div class="book without-animation with-summary font-size-2 font-family-1 color-theme-3 two-columns">
+   <div class="book-summary">
+    <div id="book-search-input" role="search">
+     <input placeholder="Type to search"/>
+    </div>
+    <nav role="navigation">
+     <ul class="summary">
+      <li class="chapter" data-level="1.1" data-path="./">
+       <a href="./deribit-intro.html">
+        Introduction
+       </a>
+      </li>
+      <li class="header">
+       RPC API
+      </li>
+      <li class="chapter" data-level="2.1">
+       <span>
+        General topics
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.1.1" data-path="api-http.html">
+         <a href="./deribit-http.html">
+          HTTP RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.2" data-path="api-websocket.html">
+         <a href="./deribit-wss.html">
+          Websocket RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.3" data-path="rpc-authentication.html">
+         <a href="./deribit-auth.html">
+          Authentication
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html">
+          Endpoints
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.5" data-path="rpc-errors.html">
+         <a href="./deribit-errors.html">
+          Errors
+         </a>
+        </li>
+        <li class="chapter active" data-level="2.1.6" data-path="rpc-notifications.html">
+         <a href="#">
+          Notifications
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.2">
+       <span>
+        Public endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.2.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#time">
+          time
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setheartbeat">
+          setheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelheartbeat">
+          cancelheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#test">
+          test
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#ping">
+          ping
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getinstruments">
+          getinstruments
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getcurrencies">
+          getcurrencies
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#index">
+          index
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getorderbook">
+          getorderbook
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlasttrades">
+          getlasttrades
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getsummary">
+          getsummary
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#stats">
+          stats
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getannouncements">
+          getannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlastsettlements">
+          getlastsettlements
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.3">
+       <span>
+        Private endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.3.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#account">
+          account
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#buy">
+          buy
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#sell">
+          sell
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#edit">
+          edit
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancel">
+          cancel
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelall">
+          cancelall
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getopenorders">
+          getopenorders
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#positions">
+          positions
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderhistory">
+          orderhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderstate">
+          orderstate
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#tradehistory">
+          tradehistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#newannouncements">
+          newannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#logout">
+          logout
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelondisconnect">
+          cancelondisconnect
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.15" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getemaillang">
+          getemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.16" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setemaillang">
+          setemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.17" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setannouncementasread">
+          setannouncementasread
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.18" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#settlementhistory">
+          settlementhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.19" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#subscribe">
+          subscribe
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.20" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#unsubscribe">
+          unsubscribe
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       FIX API
+      </li>
+      <li class="chapter" data-level="3.1" data-path="api-fix.html">
+       <a href="./deribit-fix.html">
+        FIX API
+       </a>
+      </li>
+      <li class="chapter" data-level="3.2">
+       <span>
+        Messages
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="3.2.1" data-path="api-fix.html">
+         <a href="./deribit-fix.html#logona">
+          Logon(A)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.2" data-path="api-fix.html">
+         <a href="./deribit-fix.html#logout5">
+          Logout(5)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.3" data-path="api-fix.html">
+         <a href="./deribit-fix.html#heartbeat0">
+          Heartbeat(0)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.4" data-path="api-fix.html">
+         <a href="./deribit-fix.html#test-request1">
+          Test Request(1)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.5" data-path="api-fix.html">
+         <a href="./deribit-fix.html#resend-request2">
+          Resend Request(2)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.6" data-path="api-fix.html">
+         <a href="./deribit-fix.html#reject3">
+          Reject(3)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.7" data-path="api-fix.html">
+         <a href="./deribit-fix.html#security-list-requestx">
+          Security List Request(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.8" data-path="api-fix.html">
+         <a href="./deribit-fix.html#security-listy">
+          Security List(y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.9" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-requestv">
+          Market Data Request(v)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.10" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-request-rejecty">
+          Market Data Request Reject(Y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.11" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-snapshotfull-refreshw">
+          Market Data Snapshot/Full Refresh(W)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.12" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-incremental-refreshx">
+          Market Data Incremental Refresh(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.13" data-path="api-fix.html">
+         <a href="./deribit-fix.html#new-order-singled">
+          New Order Single(D)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.14" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-cancel-requestf">
+          Order Cancel Request(F)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.15" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-mass-status-requestaf">
+          Order Mass Status Request(AF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.16" data-path="api-fix.html">
+         <a href="./deribit-fix.html#request-for-positionsan">
+          Request For Positions(AN)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.17" data-path="api-fix.html">
+         <a href="./deribit-fix.html#position-reportap">
+          Position Report(AP)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.18" data-path="api-fix.html">
+         <a href="./deribit-fix.html#user-requestbe">
+          User Request(BE)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.19" data-path="api-fix.html">
+         <a href="./deribit-fix.html#user-responsebf">
+          User Response(BF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.20" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-cancelreplace-requestg">
+          Order Cancel/Replace Request(G)
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       Changelog
+      </li>
+      <li class="chapter" data-level="4.1" data-path="changelog/release-1300.md">
+       <span>
+        Release 1.3.00
+       </span>
+      </li>
+      <li class="chapter" data-level="4.2" data-path="changelog/release-1226.html">
+       <a href="https://docs.deribit.com/changelog/release-1226.html">
+        Release 1.2.26
+       </a>
+      </li>
+      <li class="chapter" data-level="4.3" data-path="changelog/release-1225.html">
+       <a href="https://docs.deribit.com/changelog/release-1225.html">
+        Release 1.2.25
+       </a>
+      </li>
+      <li class="chapter" data-level="4.4" data-path="changelog/release-1224.html">
+       <a href="https://docs.deribit.com/changelog/release-1224.html">
+        Release 1.2.24
+       </a>
+      </li>
+      <li class="chapter" data-level="4.5" data-path="changelog/release-1223.html">
+       <a href="https://docs.deribit.com/changelog/release-1223.html">
+        Release 1.2.23
+       </a>
+      </li>
+      <li class="chapter" data-level="4.6" data-path="changelog/release-1222.html">
+       <a href="https://docs.deribit.com/changelog/release-1222.html">
+        Release 1.2.22
+       </a>
+      </li>
+      <li class="chapter" data-level="4.7" data-path="changelog/release-1221.html">
+       <a href="https://docs.deribit.com/changelog/release-1221.html">
+        Release 1.2.21
+       </a>
+      </li>
+      <li class="chapter" data-level="4.8" data-path="changelog/release-1220.html">
+       <a href="https://docs.deribit.com/changelog/release-1220.html">
+        Release 1.2.20
+       </a>
+      </li>
+      <li class="chapter" data-level="4.9" data-path="changelog/release-1219.html">
+       <a href="https://docs.deribit.com/changelog/release-1219.html">
+        Release 1.2.19
+       </a>
+      </li>
+      <li class="chapter" data-level="4.10" data-path="changelog/release-1217.html">
+       <a href="https://docs.deribit.com/changelog/release-1217.html">
+        Release 1.2.17
+       </a>
+      </li>
+      <li class="chapter" data-level="4.11" data-path="changelog/release-1215.html">
+       <a href="https://docs.deribit.com/changelog/release-1215.html">
+        Release 1.2.15
+       </a>
+      </li>
+      <li class="chapter" data-level="4.12" data-path="changelog/release-1214.html">
+       <a href="https://docs.deribit.com/changelog/release-1214.html">
+        Release 1.2.14
+       </a>
+      </li>
+      <li class="chapter" data-level="4.13" data-path="changelog/release-1212.html">
+       <a href="https://docs.deribit.com/changelog/release-1212.html">
+        Release 1.2.12
+       </a>
+      </li>
+      <li class="chapter" data-level="4.14" data-path="changelog/release-1211.html">
+       <a href="https://docs.deribit.com/changelog/release-1211.html">
+        Release 1.2.11
+       </a>
+      </li>
+      <li class="chapter" data-level="4.15" data-path="changelog/release-1210.html">
+       <a href="https://docs.deribit.com/changelog/release-1210.html">
+        Release 1.2.10
+       </a>
+      </li>
+      <li class="chapter" data-level="4.16" data-path="changelog/release-1168.html">
+       <a href="https://docs.deribit.com/changelog/release-1168.html">
+        Release 1.1.68
+       </a>
+      </li>
+      <li class="chapter" data-level="4.17" data-path="changelog/release-1167.html">
+       <a href="https://docs.deribit.com/changelog/release-1167.html">
+        Release 1.1.67
+       </a>
+      </li>
+      <li class="divider">
+      </li>
+      <li>
+       <a class="gitbook-link" href="https://www.gitbook.com/" target="blank">
+        Published with GitBook
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <div class="book-body">
+    <div class="body-inner">
+     <div class="book-header" role="navigation">
+      <a aria-label="" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-align-justify">
+       </i>
+      </a>
+      <div class="dropdown pull-right js-toolbar-action">
+       <a aria-label="Share" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-share-alt">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-left">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-5 ">
+          Facebook
+         </button>
+         <button class="button size-5 ">
+          Google+
+         </button>
+         <button class="button size-5 ">
+          Twitter
+         </button>
+         <button class="button size-5 ">
+          Weibo
+         </button>
+         <button class="button size-5 ">
+          Instapaper
+         </button>
+        </div>
+       </div>
+      </div>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-facebook">
+       </i>
+      </a>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-twitter">
+       </i>
+      </a>
+      <a aria-label="Change Layout" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-columns">
+       </i>
+      </a>
+      <div class="dropdown pull-left font-settings js-toolbar-action">
+       <a aria-label="Font Settings" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-font">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-right">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 font-reduce">
+          A
+         </button>
+         <button class="button size-2 font-enlarge">
+          A
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Serif
+         </button>
+         <button class="button size-2 ">
+          Sans
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Light
+         </button>
+         <button class="button size-2 ">
+          Dark
+         </button>
+        </div>
+       </div>
+      </div>
+      <h1>
+       <i class="fa fa-circle-o-notch fa-spin">
+       </i>
+       <a href="./deribit-intro.html">
+        Notifications
+       </a>
+      </h1>
+     </div>
+     <div class="page-wrapper" role="main" tabindex="-1">
+      <div class="page-inner">
+       <div id="book-search-results">
+        <div class="search-noresults">
+         <section class="normal markdown-section">
+          <h1 id="rpc-notifications">
+           RPC notifications
+          </h1>
+          <p>
+           RPC notifications are only available when using websockets. To receive notifications, use the
+           <a href="./deribit-endpoints.html#subscribe">
+            subscribe
+           </a>
+           endpoint.
+          </p>
+          <h2 id="tradeevent">
+           <code>
+            trade_event
+           </code>
+          </h2>
+          <p>
+           This notification can be subscribed to by subscribing to the 'trade' channel. It is sent whenever a trade takes place.
+          </p>
+          <h3 id="contents">
+           Contents
+          </h3>
+          <p>
+           The
+           <code>
+            result
+           </code>
+           field contains a list of trades. Each trade consists of:
+          </p>
+          <p>
+           This notification reports a list of trades in its
+           <code>
+            result
+           </code>
+           field. Each field consists of:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               tradeId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               3
+              </code>
+             </td>
+             <td>
+              trade id
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               timeStamp
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1418152290669
+              </code>
+             </td>
+             <td>
+              The trade timestamp in ms
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               instrument
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "BTC-22JAN16"
+              </code>
+             </td>
+             <td>
+              name of the traded instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               quantity
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               61
+              </code>
+             </td>
+             <td>
+              quantity, in contracts ($10 per contract for futures, ฿1 — for options)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               price
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               415
+              </code>
+             </td>
+             <td>
+              float, USD for futures, BTC for options
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               state
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "closed"
+              </code>
+             </td>
+             <td>
+              order state
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               direction
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "buy"
+              </code>
+             </td>
+             <td>
+              direction of the taker's order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               orderId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               10
+              </code>
+             </td>
+             <td>
+              order id (the taker's order)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               matchingId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               6
+              </code>
+             </td>
+             <td>
+              id of matching order (the maker's order)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               makerComm
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               0.0001
+              </code>
+             </td>
+             <td>
+              The maker commission in BTC
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               takerComm
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               0.0005
+              </code>
+             </td>
+             <td>
+              The taker commission in BTC
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               indexPrice
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               420.69
+              </code>
+             </td>
+             <td>
+              index price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               label
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+             </td>
+             <td>
+              user defined label for the order from side of the subscribed user.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               me
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "t"
+              </code>
+             </td>
+             <td>
+              "t" - if the subscriber is taker, "m" - the subscriber is maker, "" - empty string if the trade is between other users (trade without subscriber's participation) can be used to quickly detect subscriber's trades between other user trades
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               tickDirection
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              Direction of the "tick". Valid values: 0 = Plus Tick; 1 = Zero-Plus Tick; 2 = Minus Tick; 3 = Zero-Minus Tick
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="mytradeevent">
+           <code>
+            my_trade_event
+           </code>
+          </h2>
+          <p>
+           <code>
+            my_trade_event
+           </code>
+           is different from
+           <code>
+            trade_event
+           </code>
+           : (1) only subscriber's trades are reported and (2) the trade are reported from user's perspective, therefore - of a bit different format
+          </p>
+          <p>
+           This notification reports a list of trades in its
+           <code>
+            result
+           </code>
+           field. Each field consists of:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               tradeId
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               3
+              </code>
+             </td>
+             <td>
+              trade id
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               timeStamp
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1418152290669
+              </code>
+             </td>
+             <td>
+              The trade timestamp in ms
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               instrument
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "BTC-22JAN16"
+              </code>
+             </td>
+             <td>
+              name of the traded instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               quantity
+              </code>
+             </td>
+             <td>
+              number
+             </td>
+             <td>
+              <code>
+               61
+              </code>
+             </td>
+             <td>
+              quantity, in contracts ($10 per contract for futures, ฿1 — for options)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               amount
+              </code>
+             </td>
+             <td>
+              number
+             </td>
+             <td>
+              <code>
+               5
+              </code>
+             </td>
+             <td>
+              The amount as a quantity in contract currency units
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               tradeSeq
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               1
+              </code>
+             </td>
+             <td>
+              The trade sequence number, unique value for trade in given instrument.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               price
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               415
+              </code>
+             </td>
+             <td>
+              float, USD for futures, BTC for options
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               state
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "closed"
+              </code>
+             </td>
+             <td>
+              subscriber's order state
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               direction
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "buy"
+              </code>
+             </td>
+             <td>
+              direction of the order, from the the perspective of the end user
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               orderId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               10
+              </code>
+             </td>
+             <td>
+              order id, if the subscriber is taker
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               liquidity
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "T"
+              </code>
+             </td>
+             <td>
+              T - if subscriber is taker, M - if subscriber is maker
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               matchingId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               6
+              </code>
+             </td>
+             <td>
+              id of matching order, if the subscriber is maker
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               indexPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               420.69
+              </code>
+             </td>
+             <td>
+              index price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               makerComm
+              </code>
+             </td>
+             <td>
+              number
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              maker's commission, if the subscriber is maker
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               takerComm
+              </code>
+             </td>
+             <td>
+              number
+             </td>
+             <td>
+              <code>
+               0.000001176
+              </code>
+             </td>
+             <td>
+              taker's commission, if the subscriber is taker
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               label
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+             </td>
+             <td>
+              user defined label for the order from side of the subscribed user (up to 4 chars)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               me
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "t"
+              </code>
+             </td>
+             <td>
+              "t" - if the subscriber is taker, "m" - the subscriber is maker, "" - empty string if the trade is between other users (trade without subscriber's participation) can be used to quickly detect subscriber's trades between other user trades
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               tickDirection
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              Direction of the "tick". Valid values: 0 = Plus Tick; 1 = Zero-Plus Tick; 2 = Minus Tick; 3 = Zero-Minus Tick
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="orderbookevent">
+           <code>
+            order_book_event
+           </code>
+          </h2>
+          <p>
+           Notifies about a change of order book for certain instrument.
+          </p>
+          <p>
+           This notification reports a list of order books in its
+           <code>
+            result
+           </code>
+           field. Each order book consists of:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               bids
+              </code>
+             </td>
+             <td>
+              list
+             </td>
+             <td>
+              (see below)
+             </td>
+             <td>
+              The list of all bids, best bid first. See below for entry details
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               asks
+              </code>
+             </td>
+             <td>
+              list
+             </td>
+             <td>
+              (see below)
+             </td>
+             <td>
+              The list of all asks, best ask first. See below for entry details
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               state
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "open"
+              </code>
+             </td>
+             <td>
+              The state of the order book. Possible values include "open" and "closed".
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               settlementPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               11013.37
+              </code>
+             </td>
+             <td>
+              The settlement price for this currency
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               instrument
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "BTC-23FEB18"
+              </code>
+             </td>
+             <td>
+              REQUIRED, The name of the instrument.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               tstamp
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1517329113791
+              </code>
+             </td>
+             <td>
+              The order book timestamp in milliseconds
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               last
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               10350
+              </code>
+             </td>
+             <td>
+              The price for the last trade
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               low
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               10296.11
+              </code>
+             </td>
+             <td>
+              The 24H low for the instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               high
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               10916.03
+              </code>
+             </td>
+             <td>
+              The 24H high for the instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               mark
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               10334.06
+              </code>
+             </td>
+             <td>
+              The mark price for the instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               uPx
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               10408.16
+              </code>
+             </td>
+             <td>
+              (Only for option) underlying price used for ask/bid implied volatility
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               uIx
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               "BTC-30MAR18"
+              </code>
+             </td>
+             <td>
+              (Only for option) underlying future instrument name or
+              <code>
+               "index_price"
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               iR
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              (Only for option) interest rate used for implied volatility calculations
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               markIv
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               135
+              </code>
+             </td>
+             <td>
+              (Only for option) implied volatility for mark price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               askIv
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               130.06
+              </code>
+             </td>
+             <td>
+              (Only for option) implied volatility for best ask
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               bidIv
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               109.99
+              </code>
+             </td>
+             <td>
+              (Only for option) implied volatility for best bid
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               max
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+             </td>
+             <td>
+              (Only for futures) The maximum price for the future
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               min
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+             </td>
+             <td>
+              (Only for futures) The minimum price for the future
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           The fields
+           <code>
+            bids
+           </code>
+           and
+           <code>
+            asks
+           </code>
+           are lists of order book price level entries, sorted from best to worst.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               quantity
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               800
+              </code>
+             </td>
+             <td>
+              The total quantity of orders for this price level
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               price
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               10322.5
+              </code>
+             </td>
+             <td>
+              The price level
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               cm
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               800
+              </code>
+             </td>
+             <td>
+              The cumulative quantity
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="userorderevent">
+           <code>
+            user_order_event
+           </code>
+          </h2>
+          <p>
+           Notifies about a change of user's orders. This event is triggered for all changes of the user orders, it doesn't depend on 'instrument' argument at subscription.
+          </p>
+          <p>
+           This notification reports a list of orders in its
+           <code>
+            result
+           </code>
+           field. Each order consists of:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               id
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1031
+              </code>
+             </td>
+             <td>
+              order identifier (for compatibility with older API version)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               orderId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1031
+              </code>
+             </td>
+             <td>
+              order identifier
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               instrument
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "BTC-22JAN16"
+              </code>
+             </td>
+             <td>
+              instrument name
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               direction
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "sell"
+              </code>
+             </td>
+             <td>
+              direction of the order "buy" or "sell"
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               price
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               426
+              </code>
+             </td>
+             <td>
+              price, units depend on the asset type
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               quantity
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               10
+              </code>
+             </td>
+             <td>
+              quantity, in contracts ($10 per contract for futures, ฿1 — for options)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               filledQuantity
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              filled quantity, in contracts ($10 per contract for futures, ฿1 — for options)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               state
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "open"
+              </code>
+             </td>
+             <td>
+              order state "open", "cancelled", "filled"
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               avgPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               6591.2
+              </code>
+             </td>
+             <td>
+              average price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               label
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               ""
+              </code>
+             </td>
+             <td>
+              order label
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               created
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1453454229858
+              </code>
+             </td>
+             <td>
+              Timestamp (in ms) when the order was created
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               modified
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1453454229858
+              </code>
+             </td>
+             <td>
+              Timestamp (in ms) when the order was last changed
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="announcements">
+           <code>
+            announcements
+           </code>
+          </h2>
+          <p>
+           Notifies with titles of new announcements.
+          </p>
+          <p>
+           The
+           <code>
+            result
+           </code>
+           field contains a list of announcements. Each announcement has the following fields:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               title
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "Example announcement"
+              </code>
+             </td>
+             <td>
+              The title of the announcement
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               body
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "An&amp;nbsp;announcement"
+              </code>
+             </td>
+             <td>
+              The HTML body of the announcement
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               important
+              </code>
+             </td>
+             <td>
+              bool
+             </td>
+             <td>
+              <code>
+               false
+              </code>
+             </td>
+             <td>
+              Whether the announcement is marked as important
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               id
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               19288317
+              </code>
+             </td>
+             <td>
+              A unique identifier for the announcement
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               date
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              <code>
+               1527844253000
+              </code>
+             </td>
+             <td>
+              Timestamp in ms at which the announcement was published
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="index">
+           <code>
+            index
+           </code>
+          </h2>
+          <p>
+           This notification reports two index prices in the
+           <code>
+            result
+           </code>
+           field.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               btc
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               11628.81
+              </code>
+             </td>
+             <td>
+              The current index price for BTC-USD
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               edp
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               11628.81
+              </code>
+             </td>
+             <td>
+              Estimated delivery price for BTC-USD. For more details, see Documentation &gt; General &gt; Expiration Price
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="portfolioevent">
+           <code>
+            portfolio_event
+           </code>
+          </h2>
+          <p>
+           Notifies the user of any changes that occur to his portfolio.
+          </p>
+          <p>
+           The
+           <code>
+            result
+           </code>
+           field will contain two entries:
+           <code>
+            portfolio
+           </code>
+           and
+           <code>
+            positions
+           </code>
+           .
+          </p>
+          <p>
+           The
+           <code>
+            portfolio
+           </code>
+           field contains a list of portfolio summaries for each of the currencies in your account. A portfolio summary consists of:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               currency
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "BTC"
+              </code>
+             </td>
+             <td>
+              Code of the currency
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               equity
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               0.481203297
+              </code>
+             </td>
+             <td>
+              The total net equity of that currency
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               maintenanceMargin
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               0.000064855
+              </code>
+             </td>
+             <td>
+              The amount of the currency needed to maintain the current positions.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               initialMargin
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               0.000123813
+              </code>
+             </td>
+             <td>
+              The amount of the currency needed to open or increase positions
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               availableFunds
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               0.481079484
+              </code>
+             </td>
+             <td>
+              Total funds available (after reservations)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               unrealizedPl
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               5.65e-7
+              </code>
+             </td>
+             <td>
+              Unrealized profit or loss. These funds will be added (or deducted) to your available funds at the next settlement.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               realizedPl
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              Realized profit or loss
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               totalPl
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               0.0005624
+              </code>
+             </td>
+             <td>
+              Total profit or loss
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           The
+           <code>
+            positions
+           </code>
+           field consists of a list of positions. Each position consist of:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               instrument
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+              <code>
+               "BTC-30MAR18"
+              </code>
+             </td>
+             <td>
+              name of the instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               kind
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "future"
+              </code>
+             </td>
+             <td>
+              The type of instrument. "future" or "option"
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               size
+              </code>
+             </td>
+             <td>
+              integer
+             </td>
+             <td>
+              <code>
+               5893
+              </code>
+             </td>
+             <td>
+              The position size in contracts. Can be negative (short) or positive (long)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               averagePrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               9693.502194671
+              </code>
+             </td>
+             <td>
+              average price for the position
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               direction
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              <code>
+               "buy"
+              </code>
+             </td>
+             <td>
+              The direction of the position. Can be "buy" (long) or "sell" (short)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               sizeBtc
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               7.14775214
+              </code>
+             </td>
+             <td>
+              position size in BTC
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               floatingPl
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               -0.703874042
+              </code>
+             </td>
+             <td>
+              floating PnL
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               realizedPl
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              0,
+             </td>
+             <td>
+              realized PnL
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               estLiqPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               99999.99
+              </code>
+             </td>
+             <td>
+              Estimated liquidation price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               markPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               8244.55
+              </code>
+             </td>
+             <td>
+              mark price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               indexPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               8242.12
+              </code>
+             </td>
+             <td>
+              index price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               maintenanceMargin
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               0.214432564
+              </code>
+             </td>
+             <td>
+              maintenance margin
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               initialMargin
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               0.357387607
+              </code>
+             </td>
+             <td>
+              initial margin
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               settlementPrice
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               9145.26
+              </code>
+             </td>
+             <td>
+              The settlement price for the instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               delta
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               7.14775214
+              </code>
+             </td>
+             <td>
+              The position delta
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               openOrderMargin
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               0
+              </code>
+             </td>
+             <td>
+              The margin used to back the position
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               profitLoss
+              </code>
+             </td>
+             <td>
+              float
+             </td>
+             <td>
+              <code>
+               -1.068422015
+              </code>
+             </td>
+             <td>
+              The PnL for the position
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </section>
+        </div>
+        <div class="search-results">
+         <div class="has-results">
+          <h1 class="search-results-title">
+           <span class="search-results-count">
+           </span>
+           results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+          <ul class="search-results-list">
+          </ul>
+         </div>
+         <div class="no-results">
+          <h1 class="search-results-title">
+           No results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Notifications","level":"2.1.6","depth":2,"next":{"title":"Public endpoints","level":"2.2","depth":1,"ref":"","articles":[{"title":"time","level":"2.2.1","depth":2,"anchor":"#time","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#time","articles":[]},{"title":"setheartbeat","level":"2.2.2","depth":2,"anchor":"#setheartbeat","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#setheartbeat","articles":[]},{"title":"cancelheartbeat","level":"2.2.3","depth":2,"anchor":"#cancelheartbeat","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#cancelheartbeat","articles":[]},{"title":"test","level":"2.2.4","depth":2,"anchor":"#test","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#test","articles":[]},{"title":"ping","level":"2.2.5","depth":2,"anchor":"#ping","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#ping","articles":[]},{"title":"getinstruments","level":"2.2.6","depth":2,"anchor":"#getinstruments","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getinstruments","articles":[]},{"title":"getcurrencies","level":"2.2.7","depth":2,"anchor":"#getcurrencies","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getcurrencies","articles":[]},{"title":"index","level":"2.2.8","depth":2,"anchor":"#index","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#index","articles":[]},{"title":"getorderbook","level":"2.2.9","depth":2,"anchor":"#getorderbook","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getorderbook","articles":[]},{"title":"getlasttrades","level":"2.2.10","depth":2,"anchor":"#getlasttrades","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getlasttrades","articles":[]},{"title":"getsummary","level":"2.2.11","depth":2,"anchor":"#getsummary","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getsummary","articles":[]},{"title":"stats","level":"2.2.12","depth":2,"anchor":"#stats","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#stats","articles":[]},{"title":"getannouncements","level":"2.2.13","depth":2,"anchor":"#getannouncements","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getannouncements","articles":[]},{"title":"getlastsettlements","level":"2.2.14","depth":2,"anchor":"#getlastsettlements","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#getlastsettlements","articles":[]}]},"previous":{"title":"Errors","level":"2.1.5","depth":2,"path":"rpc-errors.md","ref":"rpc-errors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rpc-notifications.md","mtime":"2018-11-15T19:04:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T19:06:15.159Z"},"basePath":".","book":{"language":""}});
+        });
+   </script>
+  </div>
+  <script src="./../assets/deribit-notify_files/gitbook.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/theme.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/search-engine.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/search.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/lunr.min.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/search-lunr.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/buttons.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/fontsettings.js">
+  </script>
+  <script src="./../assets/deribit-notify_files/theme-api.js">
+  </script>
+ </body>
+</html>

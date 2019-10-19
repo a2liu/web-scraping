@@ -1,0 +1,1896 @@
+<html lang="en"><head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>
+   bitstamp-rest
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="Find the parameters you need to create your own trading software using the Bitstamp API. Control your account remotely through our application programming interface. Bitstamp is a global cryptocurrency exchange, supporting BTC, ETH, XRP, BCH, and LTC trading." name="description">
+  <meta content="bitcoin" name="keywords">
+  <link href="./../assets/bithumb-api_files/main.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+ </head>
+
+ <body>
+     <div style="position: fixed; top: 1em; left: 1em;" ><ul style="margin-left: 10px;">
+<li><a href="#user-content-0">back to top</a>
+<ul style="margin-left: 10px;">
+<li><a href="#user-content-1">Currencies</a></li>
+<li><a href="#user-content-2">Currency Defaults</a></li>
+<li><a href="#user-content-3">Rate Limits</a></li>
+</ul>
+</li>
+<li><a href="#user-content-4">Public API</a>
+<ul style="margin-left: 10px;">
+<li><a href="#user-content-5">/public/ticker/{currency}</a></li>
+<li><a href="#user-content-6">/public/orderbook/{currency}</a></li>
+<li><a href="#user-content-7">/public/transaction_history/{currency}</a></li>
+<li><a href="#user-content-8">/public/btci</a></li>
+</ul>
+</li>
+<li><a href="#user-content-9">Private API</a>
+<ul style="margin-left: 10px;">
+<li><a href="#user-content-10">/info/account</a></li>
+<li><a href="#user-content-11">/info/balance</a></li>
+<li><a href="#user-content-12">/info/wallet_address</a></li>
+<li><a href="#user-content-13">/info/ticker</a></li>
+<li><a href="#user-content-14">/info/orders</a></li>
+<li><a href="#user-content-15">/info/user_transactions</a></li>
+<li><a href="#user-content-16">/trade/place</a></li>
+<li><a href="#user-content-17">/info/order_detail</a></li>
+<li><a href="#user-content-18">/trade/cancel</a></li>
+<li><a href="#user-content-19">/trade/btc_withdrawal</a></li>
+<li><a href="#user-content-20">/trade/krw_deposit</a></li>
+<li><a href="#user-content-21">/trade/krw_withdrawal</a></li>
+<li><a href="#user-content-22">/trade/market_buy</a></li>
+<li><a href="#user-content-23">/trade/market_sell</a></li>
+</ul>
+</li>
+<li><a href="#user-content-24">Status Codes</a></li>
+<li><a href="#user-content-25">Sample Code</a></li>
+</ul></div>
+    <div class="cell">
+     <div class="container markdown-body"><p><a name="user-content-0"></a></p>
+<h1>Bithumb API Reference</h1>
+<p>This is the markdown version of the Bithumb API reference, with better formatting and a table of contents.</p>
+<h3>Currencies <a name="user-content-1"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+The following is a list of offered currencies, as their <code>{currency}</code> code:</p>
+<table>
+<thead>
+<tr>
+<th> </th>
+<th> </th>
+<th> </th>
+<th> </th>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BTC</td>
+<td>ETH</td>
+<td>DASH</td>
+<td>LTC</td>
+<td>ETC</td>
+<td>XRP</td>
+</tr>
+<tr>
+<td>BCH</td>
+<td>XMR</td>
+<td>ZEC</td>
+<td>QTUM</td>
+<td>BTG</td>
+<td>EOS</td>
+</tr>
+<tr>
+<td>ICX</td>
+<td>VET</td>
+<td>TRX</td>
+<td>ELF</td>
+<td>MITH</td>
+<td>MCO</td>
+</tr>
+<tr>
+<td>OMG</td>
+<td>KNC</td>
+<td>GNT</td>
+<td>HSR</td>
+<td>ZIL</td>
+<td>ETHOS</td>
+</tr>
+<tr>
+<td>PAY</td>
+<td>WAX</td>
+<td>POWR</td>
+<td>LRC</td>
+<td>GTO</td>
+<td>STEEM</td>
+</tr>
+<tr>
+<td>STRAT</td>
+<td>ZRX</td>
+<td>REP</td>
+<td>AE</td>
+<td>XEM</td>
+<td>SNT</td>
+</tr>
+<tr>
+<td>ADA</td>
+<td>PPT</td>
+<td>CTXC</td>
+<td>CMT</td>
+<td>THETA</td>
+<td>WTC</td>
+</tr>
+<tr>
+<td>ITC</td>
+<td>TRUE</td>
+<td>ABT</td>
+<td>RNT</td>
+<td>PLY</td>
+<td>WAVES</td>
+</tr>
+<tr>
+<td>LINK</td>
+<td>ENJ</td>
+<td>PST</td>
+<td>SALT</td>
+<td>RDN</td>
+<td>LOOM</td>
+</tr>
+<tr>
+<td>BHPC</td>
+<td>PIVX</td>
+<td>INS</td>
+<td>BCD</td>
+<td>BZNT</td>
+<td>XLM</td>
+</tr>
+<tr>
+<td>OCN</td>
+<td>BSV</td>
+<td>TMTG</td>
+<td>BAT</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The default is <code>BTC</code> and the code <code>ALL</code> returns data for all currencies.</p>
+<h3>Currency Defaults <a name="user-content-2"></a></h3>
+<p><a href="#user-content-0">back to top</a></p>
+<table>
+<thead>
+<tr>
+<th align="left"> </th>
+<th align="left"> </th>
+<th align="left"> </th>
+<th align="left"> </th>
+<th align="left"> </th>
+<th align="left"> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">BTC: 300</td>
+<td align="left">ETH: 2,500</td>
+<td align="left">DASH: 4,000</td>
+<td align="left">LTC: 15,000</td>
+<td align="left">ETC: 30,000</td>
+<td align="left">XRP: 2,500,000</td>
+</tr>
+<tr>
+<td align="left">BCH: 1,200</td>
+<td align="left">XMR: 10,000</td>
+<td align="left">ZEC: 2,500</td>
+<td align="left">QTUM: 30,000</td>
+<td align="left">BTG: 1,200</td>
+<td align="left">EOS: 20,000</td>
+</tr>
+<tr>
+<td align="left">ICX: 250,000</td>
+<td align="left">VET: 10,000,000</td>
+<td align="left">TRX: 10,000,000</td>
+<td align="left">ELF: 800,000</td>
+<td align="left">MITH: 1,000,000</td>
+<td align="left">MCO: 100,000</td>
+</tr>
+<tr>
+<td align="left">OMG: 100,000</td>
+<td align="left">KNC: 500,000</td>
+<td align="left">GNT: 1,000,000</td>
+<td align="left">HSR: 100,000</td>
+<td align="left">ZIL: 5,000,000</td>
+<td align="left">ETHOS: 300,000</td>
+</tr>
+<tr>
+<td align="left">PAY: 1,000,000</td>
+<td align="left">WAX: 3,000,000</td>
+<td align="left">POWR: 2,000,000</td>
+<td align="left">LRC: 1,200,000</td>
+<td align="left">GTO: 2,500,000</td>
+<td align="left">STEEM: 250,000</td>
+</tr>
+<tr>
+<td align="left">STRAT: 120,000</td>
+<td align="left">ZRX: 700,000</td>
+<td align="left">REP: 20,000</td>
+<td align="left">AE: 250,000</td>
+<td align="left">XEM: 2,500,000</td>
+<td align="left">SNT: 7,000,000</td>
+</tr>
+<tr>
+<td align="left">ADA: 3,500,000</td>
+<td align="left">PPT: 200,000</td>
+<td align="left">CTXC: 2,700,000</td>
+<td align="left">CMT: 6,000,000</td>
+<td align="left">THETA: 6,000,000</td>
+<td align="left">WTC: 200,000</td>
+</tr>
+<tr>
+<td align="left">ITC: 200,000</td>
+<td align="left">TRUE: 1,500,000</td>
+<td align="left">ABT: 4,800,000</td>
+<td align="left">RNT: 1,000,000</td>
+<td align="left">PLY: 4,000,000</td>
+<td align="left">WAVES: 250,000</td>
+</tr>
+<tr>
+<td align="left">LINK: 200,000</td>
+<td align="left">ENJ: 10,000,000</td>
+<td align="left">PST: 400,000</td>
+<td align="left">SALT: 100,000</td>
+<td align="left">RDN: 1,000,000</td>
+<td align="left">LOOM: 5,000,000</td>
+</tr>
+<tr>
+<td align="left">BHPC: 70,000</td>
+<td align="left">PIVX: 700,000</td>
+<td align="left">INS: 1,000,000</td>
+<td align="left">BCD: 300,000</td>
+<td align="left">BZNT: 10,000,000</td>
+<td align="left">XLM: 2,000,000</td>
+</tr>
+<tr>
+<td align="left">OCN: 50,000,000</td>
+<td align="left">BSV: 6,000</td>
+<td align="left">TMTG: 100,000,000</td>
+<td align="left">BAT: 4,000,000</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3>Rate Limits <a name="user-content-3"></a></h3>
+<p><a href="#user-content-0">back to top</a></p>
+<ul>
+<li><strong>The API will not be activated for members who created an account using Quick Signup without email verification.</strong></li>
+<li><strong>Public API</strong>
+<ul>
+<li>20 request available per second.</li>
+<li>If the request exceeds 20 calls per second, API usage will be limited,<br>
+and also the administrator's approval is required to remove the limitation.(Phone contact required)</li>
+</ul>
+</li>
+<li><strong>Private API</strong>
+<ul>
+<li>10 request available per second.</li>
+<li>If the request exceeds 10 calls, API usage will be limited for 5 minutes.</li>
+</ul>
+</li>
+</ul>
+<h2>Public API <a name="user-content-4"></a></h2>
+<p><a href="#user-content-0">back to top</a><br>
+public API endpoints</p>
+<h3><a href="https://api.bithumb.com/public/ticker/%7Bcurrency%7D" rel="nofollow">https://api.bithumb.com/public/ticker/{currency}</a> <a name="user-content-5"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Exchange last transaction information</p>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>opening_price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>504000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>closing_price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>505000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>min_price<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>504000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>max_price<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>516000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>average_price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>509533.3333<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>units_traded<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>14.71960286<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>volume_1day<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>14.71960286<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>volume_7day<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>15.81960286<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>buy_price<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>505000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>sell_price<span class="pl-pds">"</span></span>        : <span class="pl-s"><span class="pl-pds">"</span>504000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>24H_fluctate<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>1000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>24H_fluctate_rate<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>0.19<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>date<span class="pl-pds">"</span></span>              : <span class="pl-c1">1417141032622</span>
+    }
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">opening_price</td>
+<td align="left">transaction amount starting within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">closing_price</td>
+<td align="left">last transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">min_price</td>
+<td align="left">lowest transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">max_price</td>
+<td align="left">highest transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">average_price</td>
+<td align="left">average transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">units_traded</td>
+<td align="left">Currency transactions in the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">volume_1day</td>
+<td align="left">Currency trading volume within the day</td>
+</tr>
+<tr>
+<td align="left">volume_7day</td>
+<td align="left">Currency trading volume within the recent 7 days</td>
+</tr>
+<tr>
+<td align="left">buy_price</td>
+<td align="left">maximum Buy amount on the standby</td>
+</tr>
+<tr>
+<td align="left">sell_price</td>
+<td align="left">minimum Sell amount on standby</td>
+</tr>
+<tr>
+<td align="left">24H_fluctate</td>
+<td align="left">24H change amount</td>
+</tr>
+<tr>
+<td align="left">24H_fluctate_rate</td>
+<td align="left">24H change rate</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">Timestamp on the current time</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/public/orderbook/%7Bcurrency%7D" rel="nofollow">https://api.bithumb.com/public/orderbook/{currency}</a> <a name="user-content-6"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Standby for the purchase/sales of bithumb exchange or history information for transactions</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+	<span class="pl-s"><span class="pl-pds">"</span>group_orders<span class="pl-pds">"</span></span>: <span class="pl-c1">1</span>,
+	<span class="pl-s"><span class="pl-pds">"</span>count<span class="pl-pds">"</span></span>: <span class="pl-c1">30</span>
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">group_orders</td>
+<td align="left">Int</td>
+<td align="left">Value : 0 or 1 (Default : 1)</td>
+</tr>
+<tr>
+<td align="left">count</td>
+<td align="left">Int</td>
+<td align="left">Value : 1 ~ 50 (Default : 20), ALL : 1 ~ 5(Default : 5)</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : {
+        <span class="pl-s"><span class="pl-pds">"</span>timestamp<span class="pl-pds">"</span></span>         : <span class="pl-c1">1417142049868</span>,
+        <span class="pl-s"><span class="pl-pds">"</span>order_currency<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>BTC<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>payment_currency<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>KRW<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>bids<span class="pl-pds">"</span></span>: [
+            {
+                <span class="pl-s"><span class="pl-pds">"</span>quantity<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>6.1189306<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>504000<span class="pl-pds">"</span></span>
+            },
+            {
+                <span class="pl-s"><span class="pl-pds">"</span>quantity<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>10.35117828<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>503000<span class="pl-pds">"</span></span>
+            }
+        ],
+        <span class="pl-s"><span class="pl-pds">"</span>asks<span class="pl-pds">"</span></span>: [
+            {
+                <span class="pl-s"><span class="pl-pds">"</span>quantity<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>2.67575<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>506000<span class="pl-pds">"</span></span>
+            },
+            {
+                <span class="pl-s"><span class="pl-pds">"</span>quantity<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>3.54343<span class="pl-pds">"</span></span>,
+                <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>507000<span class="pl-pds">"</span></span>
+            }
+        ]
+    }
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">timestamp</td>
+<td align="left">Timestamp on the current time</td>
+</tr>
+<tr>
+<td align="left">order_currency</td>
+<td align="left">Order currency unit</td>
+</tr>
+<tr>
+<td align="left">payment_currency</td>
+<td align="left">Payment currency unit</td>
+</tr>
+<tr>
+<td align="left">bids</td>
+<td align="left">Buy request</td>
+</tr>
+<tr>
+<td align="left">asks</td>
+<td align="left">Sell request</td>
+</tr>
+<tr>
+<td align="left">quantity</td>
+<td align="left">Currency quantity</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">transaction amount per single unit of currency</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/public/transaction_history/%7Bcurrency%7D" rel="nofollow">https://api.bithumb.com/public/transaction_history/{currency}</a> <a name="user-content-7"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+History of completion for transactions in bithumb</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+	<span class="pl-s"><span class="pl-pds">"</span>cont_no<span class="pl-pds">"</span></span>: <span class="pl-c1">37417</span>,
+	<span class="pl-s"><span class="pl-pds">"</span>count<span class="pl-pds">"</span></span>: <span class="pl-c1">39</span>
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cont_no</td>
+<td align="left">Int</td>
+<td align="left">Value :settlement number</td>
+</tr>
+<tr>
+<td align="left">count</td>
+<td align="left">Int</td>
+<td align="left">Value : 1 ~ 100 (Default : 20)</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : [
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_no<span class="pl-pds">"</span></span>           : <span class="pl-s"><span class="pl-pds">"</span>37417<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>transaction_date<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>2018-04-10 17:47:46<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>              : <span class="pl-s"><span class="pl-pds">"</span>bid<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units_traded<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>1.0<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>6779000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>6779000<span class="pl-pds">"</span></span>
+        },
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_no<span class="pl-pds">"</span></span>           : <span class="pl-s"><span class="pl-pds">"</span>37416<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>transaction_date<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>2018-04-10 17:43:38<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>              : <span class="pl-s"><span class="pl-pds">"</span>bid<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units_traded<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>0.1<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>6779000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>677900<span class="pl-pds">"</span></span>
+        },
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_no<span class="pl-pds">"</span></span>           : <span class="pl-s"><span class="pl-pds">"</span>37410<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>transaction_date<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>2018-04-10 14:13:25<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>              : <span class="pl-s"><span class="pl-pds">"</span>ask<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units_traded<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>0.0001<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>7575000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>758<span class="pl-pds">"</span></span>
+        }
+    ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">cont_no</td>
+<td align="left">Settlement Number</td>
+</tr>
+<tr>
+<td align="left">transaction_date</td>
+<td align="left">transaction settlement time</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">Buy/Sell (ask, bid)</td>
+</tr>
+<tr>
+<td align="left">units_traded</td>
+<td align="left">transaction currency quantity</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">1Currency transaction amount</td>
+</tr>
+<tr>
+<td align="left">total</td>
+<td align="left">total transaction amount</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/public/btci" rel="nofollow">https://api.bithumb.com/public/btci</a> <a name="user-content-8"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb Market index (BTMI,BTAI)</p>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>btai<span class="pl-pds">"</span></span>          : <span class="pl-s"><span class="pl-pds">"</span>1000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>btai_width<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>btai_rate<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>btmi<span class="pl-pds">"</span></span>          : <span class="pl-s"><span class="pl-pds">"</span>1000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>btmi_width<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>btmi_rate<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>date<span class="pl-pds">"</span></span>          : <span class="pl-s"><span class="pl-pds">"</span>1542002781568<span class="pl-pds">"</span></span>
+    }
+}
+</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">btai</td>
+<td align="left">BTAI (Bithumb Altcoin Market Index)</td>
+</tr>
+<tr>
+<td align="left">btai_width</td>
+<td align="left">BTAI change amount</td>
+</tr>
+<tr>
+<td align="left">btai_rate</td>
+<td align="left">BTAI change rate</td>
+</tr>
+<tr>
+<td align="left">btmi</td>
+<td align="left">BTMI (Bithumb Market Index)</td>
+</tr>
+<tr>
+<td align="left">btmi_width</td>
+<td align="left">BTMI change amount</td>
+</tr>
+<tr>
+<td align="left">btmi_rate</td>
+<td align="left">BTMI change rate</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">Timestamp on the current time</td>
+</tr>
+</tbody>
+</table>
+<h2>Private API <a name="user-content-9"></a></h2>
+<p><a href="#user-content-0">back to top</a><br>
+Private API endpoints</p>
+<h3><a href="https://api.bithumb.com/info/account" rel="nofollow">https://api.bithumb.com/info/account</a> <a name="user-content-10"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb exchange customer information</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+	<span class="pl-s"><span class="pl-pds">"</span>apiKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3nDwl2EdnepqD194<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>secretKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3ndD-w12.Do3<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>currency<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>BTC<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : {
+        <span class="pl-s"><span class="pl-pds">"</span>created<span class="pl-pds">"</span></span>       : <span class="pl-c1">1388118018000</span>,
+        <span class="pl-s"><span class="pl-pds">"</span>account_id<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>A000105A<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>trade_fee<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>balance<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>665.40127447<span class="pl-pds">"</span></span>
+    }
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">created</td>
+<td align="left">Timestamp</td>
+</tr>
+<tr>
+<td align="left">account_id</td>
+<td align="left">user ID</td>
+</tr>
+<tr>
+<td align="left">trade_fee</td>
+<td align="left">transaction commission</td>
+</tr>
+<tr>
+<td align="left">balance</td>
+<td align="left">Currency balance for specified currency</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/info/balance" rel="nofollow">https://api.bithumb.com/info/balance</a> <a name="user-content-11"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb exchange customer wallet information</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+	<span class="pl-s"><span class="pl-pds">"</span>apiKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3nDwl2EdnepqD194<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>secretKey<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3ndD-w12.Do3<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>currency<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>BTC<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency Code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+<span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+<span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : {
+	<span class="pl-s"><span class="pl-pds">"</span>total_btc<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>665.40127447<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>total_krw<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>305507280<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>in_use_btc<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>127.43629364<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>in_use_krw<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>8839047.0000000000<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>available_btc<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>537.96498083<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>available_krw<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>294932685.000000000000<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>xcoin_last<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>505000<span class="pl-pds">"</span></span>
+}
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">total_{currency}</td>
+<td align="left">entire Currency</td>
+</tr>
+<tr>
+<td align="left">total_krw</td>
+<td align="left">entire KRW</td>
+</tr>
+<tr>
+<td align="left">in_use_{currency}</td>
+<td align="left">Currency in use</td>
+</tr>
+<tr>
+<td align="left">in_use_krw</td>
+<td align="left">KRW in use</td>
+</tr>
+<tr>
+<td align="left">available_{currency}</td>
+<td align="left">available currency</td>
+</tr>
+<tr>
+<td align="left">available_krw</td>
+<td align="left">available KRW</td>
+</tr>
+<tr>
+<td align="left">xcoin_last</td>
+<td align="left">bithumb last transaction amount</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/info/wallet_address" rel="nofollow">https://api.bithumb.com/info/wallet_address</a> <a name="user-content-12"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb exchange user deposit address</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String The currency code</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+	<span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+	<span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : {
+		<span class="pl-s"><span class="pl-pds">"</span>wallet_address<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>1H7WL8Lb8mxCTwpL1RN8yckL2gcPLgqtqD<span class="pl-pds">"</span></span>,
+		<span class="pl-s"><span class="pl-pds">"</span>currency<span class="pl-pds">"</span></span>          : <span class="pl-s"><span class="pl-pds">"</span>BTC<span class="pl-pds">"</span></span>
+	}
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">wallet_address</td>
+<td align="left">electronic wallet Address</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">The currency code</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/info/ticker" rel="nofollow">https://api.bithumb.com/info/ticker</a> <a name="user-content-13"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Customer last transaction information</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\"></pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">order_currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+<tr>
+<td align="left">payment_currency</td>
+<td align="left">String</td>
+<td align="left">KRW (currency currently provided by Bithumb KRW)</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : {
+        <span class="pl-s"><span class="pl-pds">"</span>opening_price<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>507000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>closing_price<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>516000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>min_price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>507000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>max_price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>516000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>average_price<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>513875.0000<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>units_traded<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>3.91960286<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>volume_1day<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>3.91960286<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>volume_7day<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>5.01960286<span class="pl-pds">"</span></span>,
+        <span class="pl-s"><span class="pl-pds">"</span>date<span class="pl-pds">"</span></span>          : <span class="pl-c1">1417148471595</span>
+    }
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">opening_price</td>
+<td align="left">transaction amount starting within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">closing_price</td>
+<td align="left">last transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">min_price</td>
+<td align="left">lowest transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">max_price</td>
+<td align="left">highest transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">average_price</td>
+<td align="left">average transaction amount within the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">units_traded</td>
+<td align="left">Currency transactions in the recent 24 hours</td>
+</tr>
+<tr>
+<td align="left">volume_1day</td>
+<td align="left">Currency trading volume within the day</td>
+</tr>
+<tr>
+<td align="left">volume_7day</td>
+<td align="left">Currency trading volume within the recent 7 days</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">Timestamp on the current time</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/info/orders" rel="nofollow">https://api.bithumb.com/info/orders</a> <a name="user-content-14"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Registration for order of purchase/sales or transactions in progress</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">order_id</td>
+<td align="left">String</td>
+<td align="left">order number registered for purchase/sales</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">String</td>
+<td align="left">transaction type(bid : purchase, ask : sell)</td>
+</tr>
+<tr>
+<td align="left">count</td>
+<td align="left">Int</td>
+<td align="left">Value : 1 ~1000 (default : 100)</td>
+</tr>
+<tr>
+<td align="left">after</td>
+<td align="left">Int</td>
+<td align="left">YYYY-MM-DD hh:mm:ss's UNIX Timestamp</td>
+</tr>
+<tr>
+<td align="left">(2014-11-28 16:40:01 = 1417160401000)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : [
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>order_id<span class="pl-pds">"</span></span>          : <span class="pl-s"><span class="pl-pds">"</span>1412562509982<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>order_currency<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>BTC<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>order_date<span class="pl-pds">"</span></span>        : <span class="pl-c1">1412562509982</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>payment_currency<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>KRW<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>              : <span class="pl-s"><span class="pl-pds">"</span>bid<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>            : <span class="pl-s"><span class="pl-pds">"</span>placed<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>5.0<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units_remaining<span class="pl-pds">"</span></span>   : <span class="pl-c1">null</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>501000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>               : <span class="pl-c1">null</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>             : <span class="pl-c1">null</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>date_completed<span class="pl-pds">"</span></span>    : <span class="pl-c1">null</span>
+        }
+    ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<p>Key Name  |  Description<br>
+status  |  result status code (normal: 0000, refer to error code for codes other than the normal)<br>
+order_currency  |  Order currency unit<br>
+order_date  |  order date Timestamp<br>
+payment_currency  |  Payment currency unit<br>
+type  |  classification of order request (bid : purchase, ask : sell)<br>
+status  |  order status (placed : transaction in progress)<br>
+units  |  Transaction request Currency<br>
+units_remaining  |  order balance<br>
+price  |  transaction amount per 1Currency<br>
+fee  |  transaction commission<br>
+total  |  NULL if it is not the total transaction amount or completed status from the transactions<br>
+date_completed  |  date of completion for transactions Timestamp, NULL if it is not completed</p>
+<h3><a href="https://api.bithumb.com/info/user_transactions" rel="nofollow">https://api.bithumb.com/info/user_transactions</a> <a name="user-content-15"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Customer transaction history</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">offset</td>
+<td align="left">Int</td>
+<td align="left">Value : 0 ~ (default : 0)</td>
+</tr>
+<tr>
+<td align="left">count</td>
+<td align="left">Int</td>
+<td align="left">Value : 1 ~ 50 (default : 20)</td>
+</tr>
+<tr>
+<td align="left">searchGb</td>
+<td align="left">String</td>
+<td align="left">0 : entire, 1 : completed purchase, 2 : completed sales, 3 : withdrawing, 4 : deposit, 5 : withdrawal, 9 : KRW depositing</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : [
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>search<span class="pl-pds">"</span></span>        : <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>transfer_date<span class="pl-pds">"</span></span> : <span class="pl-c1">1417139122544</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>- 0.1<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>51600<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>btc1krw<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>516000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>           : <span class="pl-s"><span class="pl-pds">"</span>0 KRW<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>btc_remain<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>665.40127447<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>krw_remain<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>305507280<span class="pl-pds">"</span></span>
+        },
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>search<span class="pl-pds">"</span></span>        : <span class="pl-s"><span class="pl-pds">"</span>2<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>transfer_date<span class="pl-pds">"</span></span> : <span class="pl-c1">1417138805912</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>- 0.1<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>         : <span class="pl-s"><span class="pl-pds">"</span>51600<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>btc1krw<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>516000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>           : <span class="pl-s"><span class="pl-pds">"</span>0 KRW<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>btc_remain<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>665.50127447<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>krw_remain<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>305455680<span class="pl-pds">"</span></span>
+        }
+    ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">search</td>
+<td align="left">search classification (0 : entire, 1 : purchase completed, 2 : sales completed, 3 : withdrawing, 4 : deposit, 5 : withdrawal, 9 : KRW depositing)</td>
+</tr>
+<tr>
+<td align="left">transfer_date</td>
+<td align="left">date of transaction Timestamp</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">transaction currency quantity</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">Executed Amount</td>
+</tr>
+<tr>
+<td align="left">{currency}1krw</td>
+<td align="left">transaction amount per 1Currency</td>
+</tr>
+<tr>
+<td align="left">fee</td>
+<td align="left">trading commission</td>
+</tr>
+<tr>
+<td align="left">{currency}_remain</td>
+<td align="left">Currency balance after transactions</td>
+</tr>
+<tr>
+<td align="left">krw_remain</td>
+<td align="left">KRW balance after transactions</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/trade/place" rel="nofollow">https://api.bithumb.com/trade/place</a> <a name="user-content-16"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb customer purchase/sales transaction order, registration, and settlement</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\"></pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">order_currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+<tr>
+<td align="left">Payment_currency</td>
+<td align="left">String</td>
+<td align="left">KRW (default value)</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Float</td>
+<td align="left">Order quantity (See <a href="#2">defaults</a> for details)</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">Int</td>
+<td align="left">transaction amount per 1Currency</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">String</td>
+<td align="left">transaction type(bid : purchase, ask : sales)</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>order_id<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>1428646963419<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>: [
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_id<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>15313<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.61460000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>284000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>     : <span class="pl-c1">174546</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>0.00061460<span class="pl-pds">"</span></span>
+        },
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_id<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>15314<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.18540000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>289000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>     : <span class="pl-c1">53581</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>0.00018540<span class="pl-pds">"</span></span>
+        }
+    ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">order_id</td>
+<td align="left">order number</td>
+</tr>
+<tr>
+<td align="left">cont_id</td>
+<td align="left">Settlement Number</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Settlement Quantity</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">Transaction price per 1Currency</td>
+</tr>
+<tr>
+<td align="left">total</td>
+<td align="left">KRW settled price</td>
+</tr>
+<tr>
+<td align="left">fee</td>
+<td align="left">Commission</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/info/order_detail" rel="nofollow">https://api.bithumb.com/info/order_detail</a> <a name="user-content-17"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb customer Buy/Sell history</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\"></pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">order_id</td>
+<td align="left">String</td>
+<td align="left">order number registered for purchase/sales</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">String</td>
+<td align="left">transaction type(bid : purchase, ask : sales)</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+<span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+ <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : [
+	 {
+		 <span class="pl-s"><span class="pl-pds">"</span>transaction_date<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>1428024598967<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>type<span class="pl-pds">"</span></span>              : <span class="pl-s"><span class="pl-pds">"</span>ask<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>order_currency<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>BTC<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>payment_currency<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>KRW<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>units_traded<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>0.0017<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>264000<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>               : <span class="pl-s"><span class="pl-pds">"</span>0.0000017<span class="pl-pds">"</span></span>,
+		 <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>             : <span class="pl-s"><span class="pl-pds">"</span>449<span class="pl-pds">"</span></span>
+	 }
+ ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">transaction_date</td>
+<td align="left">settlement period Timestamp</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">bid(Buy), ask(Sell)</td>
+</tr>
+<tr>
+<td align="left">order_currency</td>
+<td align="left">Currency code</td>
+</tr>
+<tr>
+<td align="left">payment_currency</td>
+<td align="left">KRW</td>
+</tr>
+<tr>
+<td align="left">units_traded</td>
+<td align="left">Settlement Quantity</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">Transaction price per 1Currency</td>
+</tr>
+<tr>
+<td align="left">fee</td>
+<td align="left">Commission</td>
+</tr>
+<tr>
+<td align="left">total</td>
+<td align="left">executed price</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/trade/cancel" rel="nofollow">https://api.bithumb.com/trade/cancel</a> <a name="user-content-18"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb customer purchase/sales transaction cancellation</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\"></pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">String</td>
+<td align="left">transaction type(bid : purchase, ask : sales)</td>
+</tr>
+<tr>
+<td align="left">order_id</td>
+<td align="left">String</td>
+<td align="left">order number registered for purchase/sales</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<p>A status object in the form of</p>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h3><a href="https://api.bithumb.com/trade/btc_withdrawal" rel="nofollow">https://api.bithumb.com/trade/btc_withdrawal</a> <a name="user-content-19"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb customer Currency withdrawal</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Float</td>
+<td align="left">quantity to withdraw currency</td>
+</tr>
+<tr>
+<td align="left">address</td>
+<td align="left">String</td>
+<td align="left">Currency withdrawing address</td>
+</tr>
+<tr>
+<td align="left">destination</td>
+<td align="left">Integer</td>
+<td align="left">Currency withdrawal Destination Tag (when withdraw XRP)</td>
+</tr>
+<tr>
+<td align="left">Integer</td>
+<td align="left">CurrencyWithdrawal deposit memo(MEMO) (STEEM During withdrawal)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">String</td>
+<td align="left">Currency withdrawal Payment Id (when withdraw XMR)</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Minimum amount per transaction (BTC: 0.002  |  ETH: 0.01  |  DASH: 0.01  |  LTC: 0.1  |  ETC: 0.1  |  XRP: 21  |  XMR: 0.05  |  ZEC: 0.01  |  QTUM: 0.1  |  BTG: 0.002  |  EOS: 0.5  |  ICX: 4  |  TRX: 150  |  ELF: 5  |  MITH: 5  |  MCO: 0.5  |  OMG: 0.5  |  KNC: 4  |  GNT: 12  |  ZIL: 30  |  ZRX: 3.5  |  PPT: 3  |  CTXC: 3  |  THETA: 48  |  WTC: 1.4  |  ITC: 20  |  TRUE: 10  |  ABT: 30  |  RNT: 100  |  PLY: 30  |  WAVES: 2  |  LINK: 20  |  ENJ: 100  |  PST: 30  |  SALT: 10  |  RDN: 10  |  LOOM: 46  |  BHPC: 5  |  PIVX: 5  |  INS: 13  |  BCD: 2  |  BZNT: 100  |  XLM: 20  |  OCN: 400  |  TMTG: 100  |  BAT: 20)</li>
+<li>Maximum amount per transaction : quantity based on customer grade</li>
+</ul>
+<h4>Response</h4>
+<p>A status object in the form of</p>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h3><a href="https://api.bithumb.com/trade/krw_deposit" rel="nofollow">https://api.bithumb.com/trade/krw_deposit</a> <a name="user-content-20"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb customer request for virtual account of KRW deposit</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>account<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>56208399422301<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>bank<span class="pl-pds">"</span></span>      : <span class="pl-s"><span class="pl-pds">"</span>Shinhan Bank<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>BankUser<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>BTC KoreaCom<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">account</td>
+<td align="left">virtual bank account number</td>
+</tr>
+<tr>
+<td align="left">bank</td>
+<td align="left">Shinhan Bank (bank name)</td>
+</tr>
+<tr>
+<td align="left">BankUser</td>
+<td align="left">BTC KoreaCom (name of depositor)</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/trade/krw_withdrawal" rel="nofollow">https://api.bithumb.com/trade/krw_withdrawal</a> <a name="user-content-21"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Bithumb customer KRW withdrawal request</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">bank</td>
+<td align="left">String</td>
+<td align="left"><code>bank-code_bank-name</code></td>
+</tr>
+<tr>
+<td align="left">account</td>
+<td align="left">String</td>
+<td align="left">withdrawing bank account number</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">Int</td>
+<td align="left">withdrawing amount</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<p>A status object of the form:</p>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h3><a href="https://api.bithumb.com/trade/market_buy" rel="nofollow">https://api.bithumb.com/trade/market_buy</a> <a name="user-content-22"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Buy with market price</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\"></pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Float</td>
+<td align="left">- Amount threshold per transaction : 100 million KRW</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>order_id<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>1429500241523<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>: [
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_id<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>15364<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.16789964<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>270000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>     : <span class="pl-c1">45333</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>0.00016790<span class="pl-pds">"</span></span>
+        },
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_id<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>15365<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.08210036<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>289000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>     : <span class="pl-c1">23727</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>       : <span class="pl-s"><span class="pl-pds">"</span>0.00008210<span class="pl-pds">"</span></span>
+        }
+    ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">order_id</td>
+<td align="left">order number</td>
+</tr>
+<tr>
+<td align="left">cont_id</td>
+<td align="left">settlement number</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Settlement Quantity (including fees)</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">KRW market price per 1 currency</td>
+</tr>
+<tr>
+<td align="left">total</td>
+<td align="left">purchase KRW</td>
+</tr>
+<tr>
+<td align="left">fee</td>
+<td align="left">Commission</td>
+</tr>
+</tbody>
+</table>
+<h3><a href="https://api.bithumb.com/trade/market_sell" rel="nofollow">https://api.bithumb.com/trade/market_sell</a> <a name="user-content-23"></a></h3>
+<p><a href="#user-content-0">back to top</a><br>
+Sell with market price</p>
+<h4>Request Payload</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\"></pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter Name</th>
+<th align="left">Data Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">apiKey</td>
+<td align="left">String</td>
+<td align="left">apiKey</td>
+</tr>
+<tr>
+<td align="left">secretKey</td>
+<td align="left">String</td>
+<td align="left">scretKey</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Float</td>
+<td align="left">- Amount threshold per transaction : 100 million KRW</td>
+</tr>
+<tr>
+<td align="left">currency</td>
+<td align="left">String</td>
+<td align="left">Currency code</td>
+</tr>
+</tbody>
+</table>
+<h4>Response</h4>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+<span class="pl-s"><span class="pl-pds">"</span>status<span class="pl-pds">"</span></span>    : <span class="pl-s"><span class="pl-pds">"</span>0000<span class="pl-pds">"</span></span>,
+<span class="pl-s"><span class="pl-pds">"</span>order_id<span class="pl-pds">"</span></span>  : <span class="pl-s"><span class="pl-pds">"</span>1429500318982<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span>      : [
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_id<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>15366<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.78230769<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>260000<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>     : <span class="pl-c1">203400</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>       : <span class="pl-c1">203</span>
+        },
+        {
+            <span class="pl-s"><span class="pl-pds">"</span>cont_id<span class="pl-pds">"</span></span>   : <span class="pl-s"><span class="pl-pds">"</span>15367<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>units<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>0.21769231<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>price<span class="pl-pds">"</span></span>     : <span class="pl-s"><span class="pl-pds">"</span>259500<span class="pl-pds">"</span></span>,
+            <span class="pl-s"><span class="pl-pds">"</span>total<span class="pl-pds">"</span></span>     : <span class="pl-c1">56491</span>,
+            <span class="pl-s"><span class="pl-pds">"</span>fee<span class="pl-pds">"</span></span>       : <span class="pl-c1">56</span>
+        }
+    ]
+}</pre></code class = \"json\"></div>
+<h5>Explanation</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Key Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">status</td>
+<td align="left">result status code (normal: 0000, refer to error code for codes other than the normal)</td>
+</tr>
+<tr>
+<td align="left">order_id</td>
+<td align="left">order number</td>
+</tr>
+<tr>
+<td align="left">cont_id</td>
+<td align="left">settlement number</td>
+</tr>
+<tr>
+<td align="left">units</td>
+<td align="left">Settlement Quantity (including fees)</td>
+</tr>
+<tr>
+<td align="left">price</td>
+<td align="left">KRW market price per 1 currency</td>
+</tr>
+<tr>
+<td align="left">total</td>
+<td align="left">sale KRW</td>
+</tr>
+<tr>
+<td align="left">fee</td>
+<td align="left">commission</td>
+</tr>
+</tbody>
+</table>
+<h2>Status Codes <a name="user-content-24"></a></h2>
+<p><a href="#user-content-0">back to top</a><br>
+The following are the status/error codes that the API will return:</p>
+<table>
+<thead>
+<tr>
+<th>CODE</th>
+<th>MESSAGE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0000</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>5100</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>5200</td>
+<td>Not Member</td>
+</tr>
+<tr>
+<td>5300</td>
+<td>Invalid Apikey</td>
+</tr>
+<tr>
+<td>5302</td>
+<td>Method Not Allowed</td>
+</tr>
+<tr>
+<td>5400</td>
+<td>Database Fail</td>
+</tr>
+<tr>
+<td>5500</td>
+<td>Invalid Parameter</td>
+</tr>
+<tr>
+<td>5600</td>
+<td>CUSTOM NOTICE (output the error message in each situation)</td>
+</tr>
+<tr>
+<td>5900</td>
+<td>Unknown Error</td>
+</tr>
+</tbody>
+</table>
+<p>Here's an example of one such status code:</p>
+<div class="highlight highlight-source-json"><pre><code class = \"json\">{
+    <span class="pl-s"><span class="pl-pds">"</span>success<span class="pl-pds">"</span></span> : <span class="pl-c1">5600</span>,
+    <span class="pl-s"><span class="pl-pds">"</span>message<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>minimum quantity is 0001BTC<span class="pl-pds">"</span></span>
+}</pre></code class = \"json\"></div>
+<h2>Sample Code <a name="user-content-25"></a></h2>
+<p><a href="#user-content-0">back to top</a></p>
+<ol>
+<li>PHP <a href="https://en.bithumb.com/resources/data/Bithumb_20150824_RESTFulAPI-php.zip" rel="nofollow">Download</a></li>
+<li>Java <a href="https://en.bithumb.com/resources/data/Bithumb_20150824_RESTFulAPI-java.zip" rel="nofollow">Download</a></li>
+<li>C++(Windows) <a href="https://en.bithumb.com/resources/data/Bithumb_20150824_RESTFulAPI-cpp_windows.zip" rel="nofollow">Download</a></li>
+<li>libcurl<a href="https://en.bithumb.com/resources/data/libcurl.zip" rel="nofollow">Download</a></li>
+<li>C++(Linux)<a href="https://en.bithumb.com/resources/data/Bithumb_20150824_RESTFulAPI-cpp_linux.zip" rel="nofollow">Download</a></li>
+<li>Node.js<a href="https://en.bithumb.com/resources/data/Bithumb_20150824_RESTFulAPI-nodejs.zip" rel="nofollow">Download</a></li>
+<li>python3<a href="https://en.bithumb.com/resources/data/Bithumb_20170412_RESTFulAPI-python3.zip" rel="nofollow">Download</a></li>
+<li>python<a href="https://en.bithumb.com/resources/data/Bithumb_20170414_RESTFulAPI-python.zip" rel="nofollow">Download</a></li>
+<li>C#<a href="https://en.bithumb.com/resources/data/Bithumb_20170414_RESTFulAPI-C_s.zip" rel="nofollow">Download</a></li>
+<li>GO<a href="https://en.bithumb.com/resources/data/Bithumb_20170414_RESTFulAPI-Go.zip" rel="nofollow">Download</a></li>
+</ol></div>
+  </div>
+</body></html>

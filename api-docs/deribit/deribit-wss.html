@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   deribit-wss
+  </title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="" name="description"/>
+  <meta content="GitBook 3.2.3" name="generator"/>
+  <link href="./../assets/deribit-wss_files/style.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-wss_files/website.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-wss_files/search.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-wss_files/website(1).css" rel="stylesheet"/>
+  <link href="./../assets/deribit-wss_files/theme-api.css" rel="stylesheet"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://docs.deribit.com/gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="https://docs.deribit.com/gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="./deribit-http.html" rel="prev"/>
+  <link href="./deribit-auth.html" rel="next"/>
+ </head>
+ <body>
+  <div class="book without-animation with-summary font-size-2 font-family-1 color-theme-3 two-columns">
+   <div class="book-summary">
+    <div id="book-search-input" role="search">
+     <input placeholder="Type to search"/>
+    </div>
+    <nav role="navigation">
+     <ul class="summary">
+      <li class="chapter" data-level="1.1" data-path="./">
+       <a href="./deribit-intro.html">
+        Introduction
+       </a>
+      </li>
+      <li class="header">
+       RPC API
+      </li>
+      <li class="chapter" data-level="2.1">
+       <span>
+        General topics
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.1.1" data-path="api-http.html">
+         <a href="./deribit-http.html">
+          HTTP RPC
+         </a>
+        </li>
+        <li class="chapter active" data-level="2.1.2" data-path="api-websocket.html">
+         <a href="#">
+          Websocket RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.3" data-path="rpc-authentication.html">
+         <a href="./deribit-auth.html">
+          Authentication
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html">
+          Endpoints
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.5" data-path="rpc-errors.html">
+         <a href="./deribit-errors.html">
+          Errors
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.6" data-path="rpc-notifications.html">
+         <a href="./deribit-notify.html">
+          Notifications
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.2">
+       <span>
+        Public endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.2.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#time">
+          time
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setheartbeat">
+          setheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelheartbeat">
+          cancelheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#test">
+          test
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#ping">
+          ping
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getinstruments">
+          getinstruments
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getcurrencies">
+          getcurrencies
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#index">
+          index
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getorderbook">
+          getorderbook
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlasttrades">
+          getlasttrades
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getsummary">
+          getsummary
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#stats">
+          stats
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getannouncements">
+          getannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlastsettlements">
+          getlastsettlements
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.3">
+       <span>
+        Private endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.3.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#account">
+          account
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#buy">
+          buy
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#sell">
+          sell
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#edit">
+          edit
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancel">
+          cancel
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelall">
+          cancelall
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getopenorders">
+          getopenorders
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#positions">
+          positions
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderhistory">
+          orderhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderstate">
+          orderstate
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#tradehistory">
+          tradehistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#newannouncements">
+          newannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#logout">
+          logout
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelondisconnect">
+          cancelondisconnect
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.15" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getemaillang">
+          getemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.16" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setemaillang">
+          setemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.17" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setannouncementasread">
+          setannouncementasread
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.18" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#settlementhistory">
+          settlementhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.19" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#subscribe">
+          subscribe
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.20" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#unsubscribe">
+          unsubscribe
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       FIX API
+      </li>
+      <li class="chapter" data-level="3.1" data-path="api-fix.html">
+       <a href="./deribit-fix.html">
+        FIX API
+       </a>
+      </li>
+      <li class="chapter" data-level="3.2">
+       <span>
+        Messages
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="3.2.1" data-path="api-fix.html">
+         <a href="./deribit-fix.html#logona">
+          Logon(A)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.2" data-path="api-fix.html">
+         <a href="./deribit-fix.html#logout5">
+          Logout(5)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.3" data-path="api-fix.html">
+         <a href="./deribit-fix.html#heartbeat0">
+          Heartbeat(0)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.4" data-path="api-fix.html">
+         <a href="./deribit-fix.html#test-request1">
+          Test Request(1)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.5" data-path="api-fix.html">
+         <a href="./deribit-fix.html#resend-request2">
+          Resend Request(2)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.6" data-path="api-fix.html">
+         <a href="./deribit-fix.html#reject3">
+          Reject(3)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.7" data-path="api-fix.html">
+         <a href="./deribit-fix.html#security-list-requestx">
+          Security List Request(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.8" data-path="api-fix.html">
+         <a href="./deribit-fix.html#security-listy">
+          Security List(y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.9" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-requestv">
+          Market Data Request(v)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.10" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-request-rejecty">
+          Market Data Request Reject(Y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.11" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-snapshotfull-refreshw">
+          Market Data Snapshot/Full Refresh(W)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.12" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-incremental-refreshx">
+          Market Data Incremental Refresh(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.13" data-path="api-fix.html">
+         <a href="./deribit-fix.html#new-order-singled">
+          New Order Single(D)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.14" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-cancel-requestf">
+          Order Cancel Request(F)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.15" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-mass-status-requestaf">
+          Order Mass Status Request(AF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.16" data-path="api-fix.html">
+         <a href="./deribit-fix.html#request-for-positionsan">
+          Request For Positions(AN)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.17" data-path="api-fix.html">
+         <a href="./deribit-fix.html#position-reportap">
+          Position Report(AP)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.18" data-path="api-fix.html">
+         <a href="./deribit-fix.html#user-requestbe">
+          User Request(BE)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.19" data-path="api-fix.html">
+         <a href="./deribit-fix.html#user-responsebf">
+          User Response(BF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.20" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-cancelreplace-requestg">
+          Order Cancel/Replace Request(G)
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       Changelog
+      </li>
+      <li class="chapter" data-level="4.1" data-path="changelog/release-1300.md">
+       <span>
+        Release 1.3.00
+       </span>
+      </li>
+      <li class="chapter" data-level="4.2" data-path="changelog/release-1226.html">
+       <a href="https://docs.deribit.com/changelog/release-1226.html">
+        Release 1.2.26
+       </a>
+      </li>
+      <li class="chapter" data-level="4.3" data-path="changelog/release-1225.html">
+       <a href="https://docs.deribit.com/changelog/release-1225.html">
+        Release 1.2.25
+       </a>
+      </li>
+      <li class="chapter" data-level="4.4" data-path="changelog/release-1224.html">
+       <a href="https://docs.deribit.com/changelog/release-1224.html">
+        Release 1.2.24
+       </a>
+      </li>
+      <li class="chapter" data-level="4.5" data-path="changelog/release-1223.html">
+       <a href="https://docs.deribit.com/changelog/release-1223.html">
+        Release 1.2.23
+       </a>
+      </li>
+      <li class="chapter" data-level="4.6" data-path="changelog/release-1222.html">
+       <a href="https://docs.deribit.com/changelog/release-1222.html">
+        Release 1.2.22
+       </a>
+      </li>
+      <li class="chapter" data-level="4.7" data-path="changelog/release-1221.html">
+       <a href="https://docs.deribit.com/changelog/release-1221.html">
+        Release 1.2.21
+       </a>
+      </li>
+      <li class="chapter" data-level="4.8" data-path="changelog/release-1220.html">
+       <a href="https://docs.deribit.com/changelog/release-1220.html">
+        Release 1.2.20
+       </a>
+      </li>
+      <li class="chapter" data-level="4.9" data-path="changelog/release-1219.html">
+       <a href="https://docs.deribit.com/changelog/release-1219.html">
+        Release 1.2.19
+       </a>
+      </li>
+      <li class="chapter" data-level="4.10" data-path="changelog/release-1217.html">
+       <a href="https://docs.deribit.com/changelog/release-1217.html">
+        Release 1.2.17
+       </a>
+      </li>
+      <li class="chapter" data-level="4.11" data-path="changelog/release-1215.html">
+       <a href="https://docs.deribit.com/changelog/release-1215.html">
+        Release 1.2.15
+       </a>
+      </li>
+      <li class="chapter" data-level="4.12" data-path="changelog/release-1214.html">
+       <a href="https://docs.deribit.com/changelog/release-1214.html">
+        Release 1.2.14
+       </a>
+      </li>
+      <li class="chapter" data-level="4.13" data-path="changelog/release-1212.html">
+       <a href="https://docs.deribit.com/changelog/release-1212.html">
+        Release 1.2.12
+       </a>
+      </li>
+      <li class="chapter" data-level="4.14" data-path="changelog/release-1211.html">
+       <a href="https://docs.deribit.com/changelog/release-1211.html">
+        Release 1.2.11
+       </a>
+      </li>
+      <li class="chapter" data-level="4.15" data-path="changelog/release-1210.html">
+       <a href="https://docs.deribit.com/changelog/release-1210.html">
+        Release 1.2.10
+       </a>
+      </li>
+      <li class="chapter" data-level="4.16" data-path="changelog/release-1168.html">
+       <a href="https://docs.deribit.com/changelog/release-1168.html">
+        Release 1.1.68
+       </a>
+      </li>
+      <li class="chapter" data-level="4.17" data-path="changelog/release-1167.html">
+       <a href="https://docs.deribit.com/changelog/release-1167.html">
+        Release 1.1.67
+       </a>
+      </li>
+      <li class="divider">
+      </li>
+      <li>
+       <a class="gitbook-link" href="https://www.gitbook.com/" target="blank">
+        Published with GitBook
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <div class="book-body">
+    <div class="body-inner">
+     <div class="book-header" role="navigation">
+      <a aria-label="" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-align-justify">
+       </i>
+      </a>
+      <div class="dropdown pull-right js-toolbar-action">
+       <a aria-label="Share" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-share-alt">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-left">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-5 ">
+          Facebook
+         </button>
+         <button class="button size-5 ">
+          Google+
+         </button>
+         <button class="button size-5 ">
+          Twitter
+         </button>
+         <button class="button size-5 ">
+          Weibo
+         </button>
+         <button class="button size-5 ">
+          Instapaper
+         </button>
+        </div>
+       </div>
+      </div>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-facebook">
+       </i>
+      </a>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-twitter">
+       </i>
+      </a>
+      <a aria-label="Change Layout" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-columns">
+       </i>
+      </a>
+      <div class="dropdown pull-left font-settings js-toolbar-action">
+       <a aria-label="Font Settings" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-font">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-right">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 font-reduce">
+          A
+         </button>
+         <button class="button size-2 font-enlarge">
+          A
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Serif
+         </button>
+         <button class="button size-2 ">
+          Sans
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Light
+         </button>
+         <button class="button size-2 ">
+          Dark
+         </button>
+        </div>
+       </div>
+      </div>
+      <h1>
+       <i class="fa fa-circle-o-notch fa-spin">
+       </i>
+       <a href="./deribit-intro.html">
+        Websocket RPC
+       </a>
+      </h1>
+     </div>
+     <div class="page-wrapper" role="main" tabindex="-1">
+      <div class="page-inner">
+       <div id="book-search-results">
+        <div class="search-noresults">
+         <section class="normal markdown-section">
+          <h1 id="websocket-api">
+           Websocket API
+          </h1>
+          <p>
+           The Deribit Websocket API can be used for all of the HTTP RPC endpoints. On top of this, the Websocket adds support for CoD (Cancel on Disconnect) and notification.
+          </p>
+          <p>
+           WebSocket address is
+           <code>
+            wss://www.deribit.com/ws/api/v1/
+           </code>
+           and test WebSocket server address is
+           <code>
+            wss://test.deribit.com/ws/api/v1/
+           </code>
+           . Before using the Websocket API, you'll need to enable it via the Deribit API Console (go to Account &gt; API tab &gt; API Console tab).
+          </p>
+          <p>
+           All websocket messages, are JSON encoded objects. This is true for user-generated messages and server-generated messages.
+          </p>
+          <h2 id="rpc-message-structure">
+           RPC Message structure
+          </h2>
+          <p>
+           Messages sent by the user consist of the following fields:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               action
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              '
+              <code>
+               /api/v1/private/account
+              </code>
+              '
+             </td>
+             <td>
+              The endpoint to call
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               id
+              </code>
+             </td>
+             <td>
+              integer
+             </td>
+             <td>
+              42
+             </td>
+             <td>
+              A user assigned message number, to match requests and their responses
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               arguments
+              </code>
+             </td>
+             <td>
+              object
+             </td>
+             <td>
+              {"ext": true}
+             </td>
+             <td>
+              The arguments for the endpoint. If the endpoint does not take any arguments, this field can be left out
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               sig
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+             </td>
+             <td>
+              The signature for the request. For public endpoints, this field can be left out. Check
+              <a href="./deribit-auth.html">
+               RPC authentication
+              </a>
+              for details on how to compute this signature.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           The server will respond with:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              name
+             </th>
+             <th>
+              type
+             </th>
+             <th>
+              example
+             </th>
+             <th>
+              description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <code>
+               id
+              </code>
+             </td>
+             <td>
+              integer
+             </td>
+             <td>
+              <code>
+               42
+              </code>
+             </td>
+             <td>
+              The message id specified in the call
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               success
+              </code>
+             </td>
+             <td>
+              bool
+             </td>
+             <td>
+              <code>
+               true
+              </code>
+             </td>
+             <td>
+              Whether the call was successful
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               error
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+             </td>
+             <td>
+              Only present when there is an error to report. If so, the
+              <code>
+               message
+              </code>
+              field will contain more information. Check
+              <a href="#">
+               Error codes
+              </a>
+              to determine what the error is.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               testnet
+              </code>
+             </td>
+             <td>
+              boolean
+             </td>
+             <td>
+              <code>
+               false
+              </code>
+             </td>
+             <td>
+              Indicates whether the API in use is actually the test API.
+              <code>
+               false
+              </code>
+              for production server,
+              <code>
+               true
+              </code>
+              for test server
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               message
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+             </td>
+             <td>
+              Additional information about the request. Typically used to provide error details
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               usIn
+              </code>
+             </td>
+             <td>
+              integer
+             </td>
+             <td>
+              <code>
+               1528920124554066
+              </code>
+             </td>
+             <td>
+              The time in microseconds (since Jan 1^st 2017) that the requests was received
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               usOut
+              </code>
+             </td>
+             <td>
+              integer
+             </td>
+             <td>
+              <code>
+               1528920124554067
+              </code>
+             </td>
+             <td>
+              The time in microseconds (since Jan 1^st 2017) that the response was sent
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               usDiff
+              </code>
+             </td>
+             <td>
+              integer
+             </td>
+             <td>
+              The number microseconds that was spent handling the request
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <code>
+               result
+              </code>
+             </td>
+             <td>
+              *
+             </td>
+             <td>
+             </td>
+             <td>
+              If successful, the response for the API call
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           Consult
+           <a href="./deribit-endpoints.html">
+            RPC Endpoints
+           </a>
+           to see which endpoints are available.
+          </p>
+          <h3 id="example">
+           example
+          </h3>
+          <p>
+           RPC Request:
+          </p>
+          <pre><code class="lang-js">{
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">42</span>,
+    <span class="hljs-string">"action"</span>: <span class="hljs-string">"`/api/v1/private/account`"</span>,
+    <span class="hljs-string">"arguments"</span>: {<span class="hljs-string">"ext"</span>: <span class="hljs-literal">true</span>},
+    <span class="hljs-string">"sig"</span>: <span class="hljs-string">"19EPj2jMRW46e.1328811339209.i5g0KXArbtnYDRuHkn9PYRAQ2xGzP4qM5KXcMSG3Wcw="</span>
+}
+</code></pre>
+          <p>
+           RPC Response:
+          </p>
+          <pre><code class="lang-js">{
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">42</span>,
+    <span class="hljs-string">"success"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"testnet"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">"message"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-string">"result"</span>: {...},
+    <span class="hljs-string">"usIn"</span>: <span class="hljs-number">1328811339209183</span>,
+    <span class="hljs-string">"usOut"</span>: <span class="hljs-number">1328811339209783</span>
+}
+</code></pre>
+          <h2 id="notification-message-structure">
+           Notification Message structure
+          </h2>
+          <p>
+           To receive event notifications, send a
+           <a href="./deribit-endpoints.html#subscribe">
+            subscribe
+           </a>
+           RPC call.
+          </p>
+          <p>
+           The following event channels can be subscribed to:
+          </p>
+          <ul>
+           <li>
+            <code>
+             order_book
+            </code>
+            , notifies of order book changes
+           </li>
+           <li>
+            <code>
+             trade
+            </code>
+            , trade notifications
+           </li>
+           <li>
+            <code>
+             my_trade
+            </code>
+            , trade notifications, filtered for user trades.
+           </li>
+           <li>
+            <code>
+             user_order
+            </code>
+            , notifies of opened, changed or filled user orders.
+           </li>
+           <li>
+            <code>
+             index
+            </code>
+            , notifies of index value at frequent intervals.
+           </li>
+           <li>
+            <code>
+             portfolio
+            </code>
+            , notifies of portfolio changes.
+           </li>
+           <li>
+            <code>
+             announcement
+            </code>
+            , notifies of index value at frequent intervals.
+           </li>
+          </ul>
+          <h2 id="keep-alive">
+           Keep-alive
+          </h2>
+          <p>
+           The Deribit Websocket provides two mechanisms for keep-alive and to prevent stale connections, one initiated by the client, and one initiated by the server.
+          </p>
+          <p>
+           To use the client-initiated mechanism, send
+           <code>
+            {"action": "/api/v1/public/ping"}
+           </code>
+           over the websocket connection. Within a millisecond (plus network delay),the server will respond with
+           <code>
+            {"result":"pong"}
+           </code>
+           . If you do not receive a response, you should treat the connection as dead, and reconnect.
+          </p>
+          <p>
+           To use the server-initiated mechanism, send
+           <code>
+            {"action": "/api/v1/public/setheartbeat", "arguments": {"interval": 60}}
+           </code>
+           over the websocket connection. After 60 seconds, the server will send two messages:
+           <code>
+            {"message":"heartbeat"}
+           </code>
+           and
+           <code>
+            {"message":"test_request"}
+           </code>
+           . If you do not receive a heartbeat message within 60 seconds, you should treat the connection as dead. When you receive a
+           <code>
+            test_request
+           </code>
+           message, you should respond by any websocket message,
+           <a href="./deribit-endpoints.html#ping">
+            ping
+           </a>
+           was specifically designed for this purpose. If you do not respond within 60 seconds (the heartbeat interval), the server will treat your connection as stale, and close it. While these examples used a heartbeat of 60 seconds, heartbeats as fast as 10 seconds are permitted.
+          </p>
+          <h1 id="rate-limits">
+           Rate Limits
+          </h1>
+          <p>
+           Current rate limit is 200 (order) client messages per second with bursts to 300. If you need higher rate limits please contact
+           <a href="mailto:support@deribit.com" target="_blank">
+            support
+           </a>
+           .
+          </p>
+          <h1 id="endpoints">
+           Endpoints
+          </h1>
+          <p>
+           The following endpoints are available. To use an endpoint, specify it in the
+           <code>
+            action
+           </code>
+           field. Endpoint starting with
+           <code>
+            /api/v1/private/
+           </code>
+           require a signature in the
+           <code>
+            sig
+           </code>
+           field. Check
+           <a href="./deribit-auth.html">
+            RPC authentication
+           </a>
+           for details on how to compute this signature.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Path
+             </th>
+             <th>
+              Description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#time">
+               <code>
+                /api/v1/public/time
+               </code>
+              </a>
+             </td>
+             <td>
+              Check server time
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#test">
+               <code>
+                /api/v1/public/test
+               </code>
+              </a>
+             </td>
+             <td>
+              Check connectivity
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#ping">
+               <code>
+                /api/v1/public/ping
+               </code>
+              </a>
+             </td>
+             <td>
+              Keep alive websocket connection
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#setheartbeat">
+               <code>
+                /api/v1/public/setheartbeat
+               </code>
+              </a>
+             </td>
+             <td>
+              Switches heartbeat keep-alive on
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#cancelheartbeat">
+               <code>
+                /api/v1/public/cancelheartbeat
+               </code>
+              </a>
+             </td>
+             <td>
+              Switches heartbeat keep-alive off
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getinstruments">
+               <code>
+                /api/v1/public/getinstruments
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve available instruments
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getcurrencies">
+               <code>
+                /api/v1/public/getcurrencies
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve available cryptocurrencies
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#index">
+               <code>
+                /api/v1/public/index
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve the value of the Deribit Index
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getorderbook">
+               <code>
+                /api/v1/public/getorderbook
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve the order book
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getlasttrades">
+               <code>
+                /api/v1/public/getlasttrades
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve the latest trades
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getsummary">
+               <code>
+                /api/v1/public/getsummary
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieves the summary information such as Open Interest, 24H Volume, etc.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#stats">
+               <code>
+                /api/v1/public/stats
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve aggregated 24h trade volumes for different instrument types
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getannouncements">
+               <code>
+                /api/v1/public/getannouncements
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve announcements
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getlastsettlements">
+               <code>
+                /api/v1/public/getlastsettlements
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve settlements, deliveries and bankruptcies
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#account">
+               <code>
+                /api/v1/private/account
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve account information, including balances
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#buy">
+               <code>
+                /api/v1/private/buy
+               </code>
+              </a>
+             </td>
+             <td>
+              Place a buy order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#sell">
+               <code>
+                /api/v1/private/sell
+               </code>
+              </a>
+             </td>
+             <td>
+              Place a sell order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#edit">
+               <code>
+                /api/v1/private/edit
+               </code>
+              </a>
+             </td>
+             <td>
+              Edit an existing order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#cancel">
+               <code>
+                /api/v1/private/cancel
+               </code>
+              </a>
+             </td>
+             <td>
+              Cancel an order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#cancelall">
+               <code>
+                /api/v1/private/cancelall
+               </code>
+              </a>
+             </td>
+             <td>
+              Bulk cancel orders
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getopenorders">
+               <code>
+                /api/v1/private/getopenorders
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve list of orders
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#positions">
+               <code>
+                /api/v1/private/positions
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve current positions
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#orderhistory">
+               <code>
+                /api/v1/private/orderhistory
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve historic orders for account
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#orderstate">
+               <code>
+                /api/v1/private/orderstate
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve details of one order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#tradehistory">
+               <code>
+                /api/v1/private/tradehistory
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve historic trades for account
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#newannouncements">
+               <code>
+                /api/v1/private/newannouncements
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve unread announcements
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#getemaillang">
+               <code>
+                /api/v1/private/getemaillang
+               </code>
+              </a>
+             </td>
+             <td>
+              Check email language
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#setemaillang">
+               <code>
+                /api/v1/private/setemaillang
+               </code>
+              </a>
+             </td>
+             <td>
+              Change email language
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#setannouncementasread">
+               <code>
+                /api/v1/private/setannouncementasread
+               </code>
+              </a>
+             </td>
+             <td>
+              Mark announcements as read
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#settlementhistory">
+               <code>
+                /api/v1/private/settlementhistory
+               </code>
+              </a>
+             </td>
+             <td>
+              Retrieve settlements affecting account
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#cancelondisconnect">
+               <code>
+                /api/v1/private/cancelondisconnect
+               </code>
+              </a>
+             </td>
+             <td>
+              Toggles CoD (cancel on disconnect)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#subscribe">
+               <code>
+                /api/v1/private/subscribe
+               </code>
+              </a>
+             </td>
+             <td>
+              Subscribe to notification channels
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#unsubscribe">
+               <code>
+                /api/v1/private/unsubscribe
+               </code>
+              </a>
+             </td>
+             <td>
+              Unsubscribe from notification channels
+             </td>
+            </tr>
+            <tr>
+             <td>
+              <a href="./deribit-endpoints.html#logout">
+               <code>
+                /api/v1/private/logout
+               </code>
+              </a>
+             </td>
+             <td>
+              Cleanly closes the connection
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </section>
+        </div>
+        <div class="search-results">
+         <div class="has-results">
+          <h1 class="search-results-title">
+           <span class="search-results-count">
+           </span>
+           results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+          <ul class="search-results-list">
+          </ul>
+         </div>
+         <div class="no-results">
+          <h1 class="search-results-title">
+           No results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Websocket RPC","level":"2.1.2","depth":2,"next":{"title":"Authentication","level":"2.1.3","depth":2,"path":"rpc-authentication.md","ref":"rpc-authentication.md","articles":[]},"previous":{"title":"HTTP RPC","level":"2.1.1","depth":2,"path":"api-http.md","ref":"api-http.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"api-websocket.md","mtime":"2018-11-15T19:04:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T19:06:15.159Z"},"basePath":".","book":{"language":""}});
+        });
+   </script>
+  </div>
+  <script src="./../assets/deribit-wss_files/gitbook.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/theme.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/search-engine.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/search.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/lunr.min.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/search-lunr.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/buttons.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/fontsettings.js">
+  </script>
+  <script src="./../assets/deribit-wss_files/theme-api.js">
+  </script>
+ </body>
+</html>

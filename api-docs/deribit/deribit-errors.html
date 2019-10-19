@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   deribit-errors
+  </title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="" name="description"/>
+  <meta content="GitBook 3.2.3" name="generator"/>
+  <link href="./../assets/deribit-errors_files/style.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-errors_files/website.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-errors_files/search.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-errors_files/website(1).css" rel="stylesheet"/>
+  <link href="./../assets/deribit-errors_files/theme-api.css" rel="stylesheet"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://docs.deribit.com/gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="https://docs.deribit.com/gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="./deribit-endpoints.html" rel="prev"/>
+  <link href="./deribit-notify.html" rel="next"/>
+ </head>
+ <body>
+  <div class="book without-animation with-summary font-size-2 font-family-1 color-theme-3 two-columns">
+   <div class="book-summary">
+    <div id="book-search-input" role="search">
+     <input placeholder="Type to search"/>
+    </div>
+    <nav role="navigation">
+     <ul class="summary">
+      <li class="chapter" data-level="1.1" data-path="./">
+       <a href="./deribit-intro.html">
+        Introduction
+       </a>
+      </li>
+      <li class="header">
+       RPC API
+      </li>
+      <li class="chapter" data-level="2.1">
+       <span>
+        General topics
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.1.1" data-path="api-http.html">
+         <a href="./deribit-http.html">
+          HTTP RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.2" data-path="api-websocket.html">
+         <a href="./deribit-wss.html">
+          Websocket RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.3" data-path="rpc-authentication.html">
+         <a href="./deribit-auth.html">
+          Authentication
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html">
+          Endpoints
+         </a>
+        </li>
+        <li class="chapter active" data-level="2.1.5" data-path="rpc-errors.html">
+         <a href="#">
+          Errors
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.6" data-path="rpc-notifications.html">
+         <a href="./deribit-notify.html">
+          Notifications
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.2">
+       <span>
+        Public endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.2.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#time">
+          time
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setheartbeat">
+          setheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelheartbeat">
+          cancelheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#test">
+          test
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#ping">
+          ping
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getinstruments">
+          getinstruments
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getcurrencies">
+          getcurrencies
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#index">
+          index
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getorderbook">
+          getorderbook
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlasttrades">
+          getlasttrades
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getsummary">
+          getsummary
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#stats">
+          stats
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getannouncements">
+          getannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlastsettlements">
+          getlastsettlements
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.3">
+       <span>
+        Private endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.3.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#account">
+          account
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#buy">
+          buy
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#sell">
+          sell
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#edit">
+          edit
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancel">
+          cancel
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelall">
+          cancelall
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getopenorders">
+          getopenorders
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#positions">
+          positions
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderhistory">
+          orderhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderstate">
+          orderstate
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#tradehistory">
+          tradehistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#newannouncements">
+          newannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#logout">
+          logout
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelondisconnect">
+          cancelondisconnect
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.15" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getemaillang">
+          getemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.16" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setemaillang">
+          setemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.17" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setannouncementasread">
+          setannouncementasread
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.18" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#settlementhistory">
+          settlementhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.19" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#subscribe">
+          subscribe
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.20" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#unsubscribe">
+          unsubscribe
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       FIX API
+      </li>
+      <li class="chapter" data-level="3.1" data-path="api-fix.html">
+       <a href="./deribit-fix.html">
+        FIX API
+       </a>
+      </li>
+      <li class="chapter" data-level="3.2">
+       <span>
+        Messages
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="3.2.1" data-path="api-fix.html">
+         <a href="./deribit-fix.html#logona">
+          Logon(A)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.2" data-path="api-fix.html">
+         <a href="./deribit-fix.html#logout5">
+          Logout(5)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.3" data-path="api-fix.html">
+         <a href="./deribit-fix.html#heartbeat0">
+          Heartbeat(0)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.4" data-path="api-fix.html">
+         <a href="./deribit-fix.html#test-request1">
+          Test Request(1)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.5" data-path="api-fix.html">
+         <a href="./deribit-fix.html#resend-request2">
+          Resend Request(2)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.6" data-path="api-fix.html">
+         <a href="./deribit-fix.html#reject3">
+          Reject(3)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.7" data-path="api-fix.html">
+         <a href="./deribit-fix.html#security-list-requestx">
+          Security List Request(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.8" data-path="api-fix.html">
+         <a href="./deribit-fix.html#security-listy">
+          Security List(y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.9" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-requestv">
+          Market Data Request(v)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.10" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-request-rejecty">
+          Market Data Request Reject(Y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.11" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-snapshotfull-refreshw">
+          Market Data Snapshot/Full Refresh(W)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.12" data-path="api-fix.html">
+         <a href="./deribit-fix.html#market-data-incremental-refreshx">
+          Market Data Incremental Refresh(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.13" data-path="api-fix.html">
+         <a href="./deribit-fix.html#new-order-singled">
+          New Order Single(D)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.14" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-cancel-requestf">
+          Order Cancel Request(F)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.15" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-mass-status-requestaf">
+          Order Mass Status Request(AF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.16" data-path="api-fix.html">
+         <a href="./deribit-fix.html#request-for-positionsan">
+          Request For Positions(AN)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.17" data-path="api-fix.html">
+         <a href="./deribit-fix.html#position-reportap">
+          Position Report(AP)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.18" data-path="api-fix.html">
+         <a href="./deribit-fix.html#user-requestbe">
+          User Request(BE)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.19" data-path="api-fix.html">
+         <a href="./deribit-fix.html#user-responsebf">
+          User Response(BF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.20" data-path="api-fix.html">
+         <a href="./deribit-fix.html#order-cancelreplace-requestg">
+          Order Cancel/Replace Request(G)
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       Changelog
+      </li>
+      <li class="chapter" data-level="4.1" data-path="changelog/release-1300.md">
+       <span>
+        Release 1.3.00
+       </span>
+      </li>
+      <li class="chapter" data-level="4.2" data-path="changelog/release-1226.html">
+       <a href="https://docs.deribit.com/changelog/release-1226.html">
+        Release 1.2.26
+       </a>
+      </li>
+      <li class="chapter" data-level="4.3" data-path="changelog/release-1225.html">
+       <a href="https://docs.deribit.com/changelog/release-1225.html">
+        Release 1.2.25
+       </a>
+      </li>
+      <li class="chapter" data-level="4.4" data-path="changelog/release-1224.html">
+       <a href="https://docs.deribit.com/changelog/release-1224.html">
+        Release 1.2.24
+       </a>
+      </li>
+      <li class="chapter" data-level="4.5" data-path="changelog/release-1223.html">
+       <a href="https://docs.deribit.com/changelog/release-1223.html">
+        Release 1.2.23
+       </a>
+      </li>
+      <li class="chapter" data-level="4.6" data-path="changelog/release-1222.html">
+       <a href="https://docs.deribit.com/changelog/release-1222.html">
+        Release 1.2.22
+       </a>
+      </li>
+      <li class="chapter" data-level="4.7" data-path="changelog/release-1221.html">
+       <a href="https://docs.deribit.com/changelog/release-1221.html">
+        Release 1.2.21
+       </a>
+      </li>
+      <li class="chapter" data-level="4.8" data-path="changelog/release-1220.html">
+       <a href="https://docs.deribit.com/changelog/release-1220.html">
+        Release 1.2.20
+       </a>
+      </li>
+      <li class="chapter" data-level="4.9" data-path="changelog/release-1219.html">
+       <a href="https://docs.deribit.com/changelog/release-1219.html">
+        Release 1.2.19
+       </a>
+      </li>
+      <li class="chapter" data-level="4.10" data-path="changelog/release-1217.html">
+       <a href="https://docs.deribit.com/changelog/release-1217.html">
+        Release 1.2.17
+       </a>
+      </li>
+      <li class="chapter" data-level="4.11" data-path="changelog/release-1215.html">
+       <a href="https://docs.deribit.com/changelog/release-1215.html">
+        Release 1.2.15
+       </a>
+      </li>
+      <li class="chapter" data-level="4.12" data-path="changelog/release-1214.html">
+       <a href="https://docs.deribit.com/changelog/release-1214.html">
+        Release 1.2.14
+       </a>
+      </li>
+      <li class="chapter" data-level="4.13" data-path="changelog/release-1212.html">
+       <a href="https://docs.deribit.com/changelog/release-1212.html">
+        Release 1.2.12
+       </a>
+      </li>
+      <li class="chapter" data-level="4.14" data-path="changelog/release-1211.html">
+       <a href="https://docs.deribit.com/changelog/release-1211.html">
+        Release 1.2.11
+       </a>
+      </li>
+      <li class="chapter" data-level="4.15" data-path="changelog/release-1210.html">
+       <a href="https://docs.deribit.com/changelog/release-1210.html">
+        Release 1.2.10
+       </a>
+      </li>
+      <li class="chapter" data-level="4.16" data-path="changelog/release-1168.html">
+       <a href="https://docs.deribit.com/changelog/release-1168.html">
+        Release 1.1.68
+       </a>
+      </li>
+      <li class="chapter" data-level="4.17" data-path="changelog/release-1167.html">
+       <a href="https://docs.deribit.com/changelog/release-1167.html">
+        Release 1.1.67
+       </a>
+      </li>
+      <li class="divider">
+      </li>
+      <li>
+       <a class="gitbook-link" href="https://www.gitbook.com/" target="blank">
+        Published with GitBook
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <div class="book-body">
+    <div class="body-inner">
+     <div class="book-header" role="navigation">
+      <a aria-label="" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-align-justify">
+       </i>
+      </a>
+      <div class="dropdown pull-right js-toolbar-action">
+       <a aria-label="Share" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-share-alt">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-left">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-5 ">
+          Facebook
+         </button>
+         <button class="button size-5 ">
+          Google+
+         </button>
+         <button class="button size-5 ">
+          Twitter
+         </button>
+         <button class="button size-5 ">
+          Weibo
+         </button>
+         <button class="button size-5 ">
+          Instapaper
+         </button>
+        </div>
+       </div>
+      </div>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-facebook">
+       </i>
+      </a>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-twitter">
+       </i>
+      </a>
+      <a aria-label="Change Layout" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-columns">
+       </i>
+      </a>
+      <div class="dropdown pull-left font-settings js-toolbar-action">
+       <a aria-label="Font Settings" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-font">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-right">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 font-reduce">
+          A
+         </button>
+         <button class="button size-2 font-enlarge">
+          A
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Serif
+         </button>
+         <button class="button size-2 ">
+          Sans
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Light
+         </button>
+         <button class="button size-2 ">
+          Dark
+         </button>
+        </div>
+       </div>
+      </div>
+      <h1>
+       <i class="fa fa-circle-o-notch fa-spin">
+       </i>
+       <a href="./deribit-intro.html">
+        Errors
+       </a>
+      </h1>
+     </div>
+     <div class="page-wrapper" role="main" tabindex="-1">
+      <div class="page-inner">
+       <div id="book-search-results">
+        <div class="search-noresults">
+         <section class="normal markdown-section">
+          <table>
+           <thead>
+            <tr>
+             <th style="text-align:left">
+              Error Code
+             </th>
+             <th style="text-align:left">
+              Short message
+             </th>
+             <th style="text-align:left">
+              Description
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td style="text-align:left">
+              0 or absent
+             </td>
+             <td style="text-align:left">
+             </td>
+             <td style="text-align:left">
+              Success, No error
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              9999
+             </td>
+             <td style="text-align:left">
+              <code>
+               "api_not_enabled"
+              </code>
+             </td>
+             <td style="text-align:left">
+              User didn't enable API for the Account
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10000
+             </td>
+             <td style="text-align:left">
+              <code>
+               "authorization_required"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Authorization issue, invalid or absent signature etc
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10001
+             </td>
+             <td style="text-align:left">
+              <code>
+               "error"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Some general failure, no public information available
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10002
+             </td>
+             <td style="text-align:left">
+              <code>
+               "qty_too_low"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Order quantity is too low
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10003
+             </td>
+             <td style="text-align:left">
+              <code>
+               "order_overlap"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Rejection, order overlap is found and self-trading is not enabled
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10004
+             </td>
+             <td style="text-align:left">
+              <code>
+               "order_not_found"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Attempt to operate with order that can't be found by specified id
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10005
+             </td>
+             <td style="text-align:left">
+              <code>
+               "price_too_low &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Price is too low,
+              <code>
+               &lt;Limit&gt;
+              </code>
+              defines current limit for the operation
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10006
+             </td>
+             <td style="text-align:left">
+              <code>
+               "price_too_low4idx &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Price is too low for current index,
+              <code>
+               &lt;Limit&gt;
+              </code>
+              defines current bottom limit for the operation
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10007
+             </td>
+             <td style="text-align:left">
+              <code>
+               "price_too_high &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Price is too high,
+              <code>
+               &lt;Limit&gt;
+              </code>
+              defines current up limit for the operation
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10008
+             </td>
+             <td style="text-align:left">
+              <code>
+               "price_too_high4idx &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Price is too high for current index,
+              <code>
+               &lt;Limit&gt;
+              </code>
+              defines current up limit for the operation
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10009
+             </td>
+             <td style="text-align:left">
+              <code>
+               "not_enough_funds"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Account has not enough funds for the operation
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10010
+             </td>
+             <td style="text-align:left">
+              <code>
+               "already_closed"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Attempt of doing something with closed order
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10011
+             </td>
+             <td style="text-align:left">
+              <code>
+               "price_not_allowed"
+              </code>
+             </td>
+             <td style="text-align:left">
+              This price is not allowed for some reason
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10012
+             </td>
+             <td style="text-align:left">
+              <code>
+               "book_closed"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Operation for instrument which order book had been closed
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10013
+             </td>
+             <td style="text-align:left">
+              <code>
+               "pme_max_total_open_orders &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Total limit of open orders has been exceeded, it is applicable for PME users
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10014
+             </td>
+             <td style="text-align:left">
+              <code>
+               "pme_max_future_open_orders &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Limit of count of futures' open orders has been exceeded, it is applicable for PME users
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10015
+             </td>
+             <td style="text-align:left">
+              <code>
+               "pme_max_option_open_orders &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Limit of count of options' open orders has been exceeded, it is applicable for PME users
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10016
+             </td>
+             <td style="text-align:left">
+              <code>
+               "pme_max_future_open_orders_size &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Limit of size for futures has been exceeded, it is applicable for PME users
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10017
+             </td>
+             <td style="text-align:left">
+              <code>
+               "pme_max_option_open_orders_size &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Limit of size for options has been exceeded, it is applicable for PME users
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10019
+             </td>
+             <td style="text-align:left">
+              <code>
+               "locked_by_admin"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Trading is temporary locked by admin
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10020
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_or_unsupported_instrument"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Instrument name is not valid
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10022
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_quantity"
+              </code>
+             </td>
+             <td style="text-align:left">
+              quantity was not recognized as a valid number
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10023
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_price"
+              </code>
+             </td>
+             <td style="text-align:left">
+              price was not recognized as a valid number
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10024
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_max_show"
+              </code>
+             </td>
+             <td style="text-align:left">
+              <code>
+               max_show
+              </code>
+              parameter was not recognized as a valid number
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10025
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_order_id"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Order id is missing or its format was not recognized as valid
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10026
+             </td>
+             <td style="text-align:left">
+              <code>
+               "price_precision_exceeded"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Extra precision of the price is not supported
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10027
+             </td>
+             <td style="text-align:left">
+              <code>
+               "non_integer_contract_amount"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Futures contract amount was not recognized as integer
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10028
+             </td>
+             <td style="text-align:left">
+              <code>
+               "too_many_requests"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Allowed request rate has been exceeded
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10029
+             </td>
+             <td style="text-align:left">
+              <code>
+               "not_owner_of_order"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Attempt to operate with not own order
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10030
+             </td>
+             <td style="text-align:left">
+              <code>
+               "must_be_websocket_request"
+              </code>
+             </td>
+             <td style="text-align:left">
+              REST request where Websocket is expected
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10031
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_args_for_instrument"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Some of arguments are not recognized as valid
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10032
+             </td>
+             <td style="text-align:left">
+              <code>
+               "whole_cost_too_low"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Total cost is too low
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10033
+             </td>
+             <td style="text-align:left">
+              <code>
+               "not_implemented"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Method is not implemented yet
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10034
+             </td>
+             <td style="text-align:left">
+              <code>
+               "stop_price_too_high"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Stop price is too high
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              10035
+             </td>
+             <td style="text-align:left">
+              <code>
+               "stop_price_too_low"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Stop price is too low
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11035
+             </td>
+             <td style="text-align:left">
+              <code>
+               "no_more_stops &lt;Limit&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Allowed amount of stop orders has been exceeded
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11036
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_stoppx_for_index_or_last"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Invalid
+              <code>
+               StopPx
+              </code>
+              (too high or too low) as to current index or market
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11037
+             </td>
+             <td style="text-align:left">
+              <code>
+               "outdated_instrument_for_IV_order"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Instrument already not available for trading
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11038
+             </td>
+             <td style="text-align:left">
+              <code>
+               "no_adv_for_futures"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Advanced orders are not available for futures
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11039
+             </td>
+             <td style="text-align:left">
+              <code>
+               "no_adv_postonly"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Advanced post-only orders are not supported yet
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11040
+             </td>
+             <td style="text-align:left">
+              <code>
+               "impv_not_in_range 0..499%"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Implied volatility is out of allowed range
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11041
+             </td>
+             <td style="text-align:left">
+              <code>
+               "not_adv_order"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Advanced order properties can't be set if the order is not advanced
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11042
+             </td>
+             <td style="text-align:left">
+              <code>
+               "permission_denied"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Permission for the operation has been denied
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11044
+             </td>
+             <td style="text-align:left">
+              <code>
+               "not_open_order"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Attempt to do open order operations with the not open order
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11045
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_event"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Event name has not been recognized
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11046
+             </td>
+             <td style="text-align:left">
+              <code>
+               "outdated_instrument"
+              </code>
+             </td>
+             <td style="text-align:left">
+              At several minutes to instrument expiration, corresponding advanced implied volatility orders are not allowed
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11047
+             </td>
+             <td style="text-align:left">
+              <code>
+               "unsupported_arg_combination"
+              </code>
+             </td>
+             <td style="text-align:left">
+              The specified combination of arguments is not supported
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11048
+             </td>
+             <td style="text-align:left">
+              <code>
+               "not_on_this_server"
+              </code>
+             </td>
+             <td style="text-align:left">
+              The requested operation is not available on this server.
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11050
+             </td>
+             <td style="text-align:left">
+              <code>
+               "invalid_request"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Request has not been parsed properly
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11051
+             </td>
+             <td style="text-align:left">
+              <code>
+               "system_maintenance"
+              </code>
+             </td>
+             <td style="text-align:left">
+              System is under maintenance
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11030
+             </td>
+             <td style="text-align:left">
+              <code>
+               "other_reject &lt;Reason&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Some rejects which are not considered as very often, more info may be specified in
+              <code>
+               &lt;Reason&gt;
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td style="text-align:left">
+              11031
+             </td>
+             <td style="text-align:left">
+              <code>
+               "other_error &lt;Error&gt;"
+              </code>
+             </td>
+             <td style="text-align:left">
+              Some errors which are not considered as very often, more info may be specified in
+              <code>
+               &lt;Error&gt;
+              </code>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </section>
+        </div>
+        <div class="search-results">
+         <div class="has-results">
+          <h1 class="search-results-title">
+           <span class="search-results-count">
+           </span>
+           results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+          <ul class="search-results-list">
+          </ul>
+         </div>
+         <div class="no-results">
+          <h1 class="search-results-title">
+           No results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Errors","level":"2.1.5","depth":2,"next":{"title":"Notifications","level":"2.1.6","depth":2,"path":"rpc-notifications.md","ref":"rpc-notifications.md","articles":[]},"previous":{"title":"Endpoints","level":"2.1.4","depth":2,"path":"rpc-endpoints.md","ref":"rpc-endpoints.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rpc-errors.md","mtime":"2018-11-15T19:04:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T19:06:15.159Z"},"basePath":".","book":{"language":""}});
+        });
+   </script>
+  </div>
+  <script src="./../assets/deribit-errors_files/gitbook.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/theme.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/search-engine.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/search.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/lunr.min.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/search-lunr.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/buttons.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/fontsettings.js">
+  </script>
+  <script src="./../assets/deribit-errors_files/theme-api.js">
+  </script>
+ </body>
+</html>

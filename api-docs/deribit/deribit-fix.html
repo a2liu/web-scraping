@@ -1,0 +1,6055 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   deribit-fix
+  </title>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="" name="description"/>
+  <meta content="GitBook 3.2.3" name="generator"/>
+  <link href="./../assets/deribit-fix_files/style.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-fix_files/website.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-fix_files/search.css" rel="stylesheet"/>
+  <link href="./../assets/deribit-fix_files/website(1).css" rel="stylesheet"/>
+  <link href="./../assets/deribit-fix_files/theme-api.css" rel="stylesheet"/>
+  <meta content="true" name="HandheldFriendly"/>
+  <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <link href="https://docs.deribit.com/gitbook/images/apple-touch-icon-precomposed-152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+  <link href="https://docs.deribit.com/gitbook/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="./deribit-endpoints.html" rel="prev"/>
+ </head>
+ <body>
+  <div class="book without-animation with-summary font-size-2 font-family-1 color-theme-3 two-columns">
+   <div class="book-summary">
+    <div id="book-search-input" role="search">
+     <input placeholder="Type to search"/>
+    </div>
+    <nav role="navigation">
+     <ul class="summary">
+      <li class="chapter" data-level="1.1" data-path="./">
+       <a href="./deribit-intro.html">
+        Introduction
+       </a>
+      </li>
+      <li class="header">
+       RPC API
+      </li>
+      <li class="chapter" data-level="2.1">
+       <span>
+        General topics
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.1.1" data-path="api-http.html">
+         <a href="./deribit-http.html">
+          HTTP RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.2" data-path="api-websocket.html">
+         <a href="./deribit-wss.html">
+          Websocket RPC
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.3" data-path="rpc-authentication.html">
+         <a href="./deribit-auth.html">
+          Authentication
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html">
+          Endpoints
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.5" data-path="rpc-errors.html">
+         <a href="./deribit-errors.html">
+          Errors
+         </a>
+        </li>
+        <li class="chapter" data-level="2.1.6" data-path="rpc-notifications.html">
+         <a href="./deribit-notify.html">
+          Notifications
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.2">
+       <span>
+        Public endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.2.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#time">
+          time
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setheartbeat">
+          setheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelheartbeat">
+          cancelheartbeat
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#test">
+          test
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#ping">
+          ping
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getinstruments">
+          getinstruments
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getcurrencies">
+          getcurrencies
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#index">
+          index
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getorderbook">
+          getorderbook
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlasttrades">
+          getlasttrades
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getsummary">
+          getsummary
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#stats">
+          stats
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getannouncements">
+          getannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.2.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getlastsettlements">
+          getlastsettlements
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="chapter" data-level="2.3">
+       <span>
+        Private endpoints
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="2.3.1" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#account">
+          account
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.2" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#buy">
+          buy
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.3" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#sell">
+          sell
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.4" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#edit">
+          edit
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.5" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancel">
+          cancel
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.6" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelall">
+          cancelall
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.7" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getopenorders">
+          getopenorders
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.8" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#positions">
+          positions
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.9" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderhistory">
+          orderhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.10" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#orderstate">
+          orderstate
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.11" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#tradehistory">
+          tradehistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.12" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#newannouncements">
+          newannouncements
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.13" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#logout">
+          logout
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.14" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#cancelondisconnect">
+          cancelondisconnect
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.15" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#getemaillang">
+          getemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.16" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setemaillang">
+          setemaillang
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.17" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#setannouncementasread">
+          setannouncementasread
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.18" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#settlementhistory">
+          settlementhistory
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.19" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#subscribe">
+          subscribe
+         </a>
+        </li>
+        <li class="chapter" data-level="2.3.20" data-path="rpc-endpoints.html">
+         <a href="./deribit-endpoints.html#unsubscribe">
+          unsubscribe
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       FIX API
+      </li>
+      <li class="chapter active" data-level="3.1" data-path="api-fix.html">
+       <a href="#">
+        FIX API
+       </a>
+      </li>
+      <li class="chapter" data-level="3.2">
+       <span>
+        Messages
+       </span>
+       <ul class="articles">
+        <li class="chapter" data-level="3.2.1" data-path="api-fix.html">
+         <a href="#logona">
+          Logon(A)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.2" data-path="api-fix.html">
+         <a href="#logout5">
+          Logout(5)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.3" data-path="api-fix.html">
+         <a href="#heartbeat0">
+          Heartbeat(0)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.4" data-path="api-fix.html">
+         <a href="#test-request1">
+          Test Request(1)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.5" data-path="api-fix.html">
+         <a href="#resend-request2">
+          Resend Request(2)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.6" data-path="api-fix.html">
+         <a href="#reject3">
+          Reject(3)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.7" data-path="api-fix.html">
+         <a href="#security-list-requestx">
+          Security List Request(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.8" data-path="api-fix.html">
+         <a href="#security-listy">
+          Security List(y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.9" data-path="api-fix.html">
+         <a href="#market-data-requestv">
+          Market Data Request(v)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.10" data-path="api-fix.html">
+         <a href="#market-data-request-rejecty">
+          Market Data Request Reject(Y)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.11" data-path="api-fix.html">
+         <a href="#market-data-snapshotfull-refreshw">
+          Market Data Snapshot/Full Refresh(W)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.12" data-path="api-fix.html">
+         <a href="#market-data-incremental-refreshx">
+          Market Data Incremental Refresh(x)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.13" data-path="api-fix.html">
+         <a href="#new-order-singled">
+          New Order Single(D)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.14" data-path="api-fix.html">
+         <a href="#order-cancel-requestf">
+          Order Cancel Request(F)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.15" data-path="api-fix.html">
+         <a href="#order-mass-status-requestaf">
+          Order Mass Status Request(AF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.16" data-path="api-fix.html">
+         <a href="#request-for-positionsan">
+          Request For Positions(AN)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.17" data-path="api-fix.html">
+         <a href="#position-reportap">
+          Position Report(AP)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.18" data-path="api-fix.html">
+         <a href="#user-requestbe">
+          User Request(BE)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.19" data-path="api-fix.html">
+         <a href="#user-responsebf">
+          User Response(BF)
+         </a>
+        </li>
+        <li class="chapter" data-level="3.2.20" data-path="api-fix.html">
+         <a href="#order-cancelreplace-requestg">
+          Order Cancel/Replace Request(G)
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="header">
+       Changelog
+      </li>
+      <li class="chapter" data-level="4.1" data-path="changelog/release-1300.md">
+       <span>
+        Release 1.3.00
+       </span>
+      </li>
+      <li class="chapter" data-level="4.2" data-path="changelog/release-1226.html">
+       <a href="https://docs.deribit.com/changelog/release-1226.html">
+        Release 1.2.26
+       </a>
+      </li>
+      <li class="chapter" data-level="4.3" data-path="changelog/release-1225.html">
+       <a href="https://docs.deribit.com/changelog/release-1225.html">
+        Release 1.2.25
+       </a>
+      </li>
+      <li class="chapter" data-level="4.4" data-path="changelog/release-1224.html">
+       <a href="https://docs.deribit.com/changelog/release-1224.html">
+        Release 1.2.24
+       </a>
+      </li>
+      <li class="chapter" data-level="4.5" data-path="changelog/release-1223.html">
+       <a href="https://docs.deribit.com/changelog/release-1223.html">
+        Release 1.2.23
+       </a>
+      </li>
+      <li class="chapter" data-level="4.6" data-path="changelog/release-1222.html">
+       <a href="https://docs.deribit.com/changelog/release-1222.html">
+        Release 1.2.22
+       </a>
+      </li>
+      <li class="chapter" data-level="4.7" data-path="changelog/release-1221.html">
+       <a href="https://docs.deribit.com/changelog/release-1221.html">
+        Release 1.2.21
+       </a>
+      </li>
+      <li class="chapter" data-level="4.8" data-path="changelog/release-1220.html">
+       <a href="https://docs.deribit.com/changelog/release-1220.html">
+        Release 1.2.20
+       </a>
+      </li>
+      <li class="chapter" data-level="4.9" data-path="changelog/release-1219.html">
+       <a href="https://docs.deribit.com/changelog/release-1219.html">
+        Release 1.2.19
+       </a>
+      </li>
+      <li class="chapter" data-level="4.10" data-path="changelog/release-1217.html">
+       <a href="https://docs.deribit.com/changelog/release-1217.html">
+        Release 1.2.17
+       </a>
+      </li>
+      <li class="chapter" data-level="4.11" data-path="changelog/release-1215.html">
+       <a href="https://docs.deribit.com/changelog/release-1215.html">
+        Release 1.2.15
+       </a>
+      </li>
+      <li class="chapter" data-level="4.12" data-path="changelog/release-1214.html">
+       <a href="https://docs.deribit.com/changelog/release-1214.html">
+        Release 1.2.14
+       </a>
+      </li>
+      <li class="chapter" data-level="4.13" data-path="changelog/release-1212.html">
+       <a href="https://docs.deribit.com/changelog/release-1212.html">
+        Release 1.2.12
+       </a>
+      </li>
+      <li class="chapter" data-level="4.14" data-path="changelog/release-1211.html">
+       <a href="https://docs.deribit.com/changelog/release-1211.html">
+        Release 1.2.11
+       </a>
+      </li>
+      <li class="chapter" data-level="4.15" data-path="changelog/release-1210.html">
+       <a href="https://docs.deribit.com/changelog/release-1210.html">
+        Release 1.2.10
+       </a>
+      </li>
+      <li class="chapter" data-level="4.16" data-path="changelog/release-1168.html">
+       <a href="https://docs.deribit.com/changelog/release-1168.html">
+        Release 1.1.68
+       </a>
+      </li>
+      <li class="chapter" data-level="4.17" data-path="changelog/release-1167.html">
+       <a href="https://docs.deribit.com/changelog/release-1167.html">
+        Release 1.1.67
+       </a>
+      </li>
+      <li class="divider">
+      </li>
+      <li>
+       <a class="gitbook-link" href="https://www.gitbook.com/" target="blank">
+        Published with GitBook
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+   <div class="book-body">
+    <div class="body-inner">
+     <div class="book-header" role="navigation">
+      <a aria-label="" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-align-justify">
+       </i>
+      </a>
+      <div class="dropdown pull-right js-toolbar-action">
+       <a aria-label="Share" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-share-alt">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-left">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-5 ">
+          Facebook
+         </button>
+         <button class="button size-5 ">
+          Google+
+         </button>
+         <button class="button size-5 ">
+          Twitter
+         </button>
+         <button class="button size-5 ">
+          Weibo
+         </button>
+         <button class="button size-5 ">
+          Instapaper
+         </button>
+        </div>
+       </div>
+      </div>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-facebook">
+       </i>
+      </a>
+      <a aria-label="" class="btn pull-right js-toolbar-action" href="#">
+       <i class="fa fa-twitter">
+       </i>
+      </a>
+      <a aria-label="Change Layout" class="btn pull-left js-toolbar-action" href="#">
+       <i class="fa fa-columns">
+       </i>
+      </a>
+      <div class="dropdown pull-left font-settings js-toolbar-action">
+       <a aria-label="Font Settings" class="btn toggle-dropdown" href="#">
+        <i class="fa fa-font">
+        </i>
+       </a>
+       <div class="dropdown-menu dropdown-right">
+        <div class="dropdown-caret">
+         <span class="caret-outer">
+         </span>
+         <span class="caret-inner">
+         </span>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 font-reduce">
+          A
+         </button>
+         <button class="button size-2 font-enlarge">
+          A
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Serif
+         </button>
+         <button class="button size-2 ">
+          Sans
+         </button>
+        </div>
+        <div class="buttons">
+         <button class="button size-2 ">
+          Light
+         </button>
+         <button class="button size-2 ">
+          Dark
+         </button>
+        </div>
+       </div>
+      </div>
+      <h1>
+       <i class="fa fa-circle-o-notch fa-spin">
+       </i>
+       <a href="./deribit-intro.html">
+        FIX API
+       </a>
+      </h1>
+     </div>
+     <div class="page-wrapper" role="main" tabindex="-1">
+      <div class="page-inner">
+       <div id="book-search-results">
+        <div class="search-noresults">
+         <section class="normal markdown-section">
+          <h1 id="fix-api">
+           FIX API
+          </h1>
+          <p>
+           Deribit FIX API is a subset of FIX version 4.4, but also includes some tags from 5.0 version and several custom tags. Deribit uses the standard header and trailer structure for all messages. To enable the API, sign in and go to
+           <strong>
+            Account &gt; Security &gt; API
+           </strong>
+           Tab and use the checkbox. 'Access Secret' is the user's secret key provided by Deribit. Important Note: Do not reveal to anybody your 'Access Secret', as it can be used to gain full control over your account.
+          </p>
+          <p>
+           The FIX server can be reached at
+           <code>
+            www.deribit.com:9880
+           </code>
+           . The FIX server for the test network can be reached at
+           <code>
+            test.deribit.com:9881
+           </code>
+           .
+          </p>
+          <p>
+           Each request message can include:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              8
+             </td>
+             <td>
+              <code>
+               BeginString
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Identifies beginning of new message and protocol version. Must always be first in the message.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              9
+             </td>
+             <td>
+              <code>
+               BodyLength
+              </code>
+             </td>
+             <td>
+              Length
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Message length in bytes, not including fields 8, 9 and 10. See refer to FIX specification on how to compute this field. Must always be the first field in the message.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              35
+             </td>
+             <td>
+              <code>
+               MsgType
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The type of the message. See below for available types
+             </td>
+            </tr>
+            <tr>
+             <td>
+              49
+             </td>
+             <td>
+              <code>
+               SenderCompID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              A user defined client name
+             </td>
+            </tr>
+            <tr>
+             <td>
+              56
+             </td>
+             <td>
+              <code>
+               TargetCompID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Constant value:
+              <code>
+               DERIBITSERVER
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              34
+             </td>
+             <td>
+              <code>
+               MsgSeqNum
+              </code>
+             </td>
+             <td>
+              SeqNum
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              A sequence number for the message, starts with 1, and must be incremented by 1 for every message.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              52
+             </td>
+             <td>
+              <code>
+               SendingTime
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              The time the request is sent. This field is ignored by the server
+             </td>
+            </tr>
+            <tr>
+             <td>
+              10
+             </td>
+             <td>
+              <code>
+               CheckSum
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The checksum of all of all preceding messages. See refer to FIX specification on how to compute this field. Must always be the last field in the message.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           Responses sent by the server will at least include:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              8
+             </td>
+             <td>
+              <code>
+               BeginString
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Identifies beginning of new message and protocol version. Must always be first in the message.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              9
+             </td>
+             <td>
+              <code>
+               BodyLength
+              </code>
+             </td>
+             <td>
+              Length
+             </td>
+             <td>
+              Message length in bytes, not including fields 8, 9 and 10. See refer to FIX specification on how to verify this field. Must always be the first field in the message.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              35
+             </td>
+             <td>
+              <code>
+               MsgType
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              The type of the message. See below for available types
+             </td>
+            </tr>
+            <tr>
+             <td>
+              49
+             </td>
+             <td>
+              <code>
+               SenderCompID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Constant value:
+              <code>
+               DERIBITSERVER
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              56
+             </td>
+             <td>
+              <code>
+               TargetCompID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              A user defined client name
+             </td>
+            </tr>
+            <tr>
+             <td>
+              34
+             </td>
+             <td>
+              <code>
+               MsgSeqNum
+              </code>
+             </td>
+             <td>
+              SeqNum
+             </td>
+             <td>
+              A server-chosen sequence number for the message.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              52
+             </td>
+             <td>
+              <code>
+               SendingTime
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              The time the request is sent. This field is ignored by the server
+             </td>
+            </tr>
+            <tr>
+             <td>
+              10
+             </td>
+             <td>
+              <code>
+               CheckSum
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              The checksum of all of all preceding messages. See refer to FIX specification on how to verify this field. Must always be the last field in the message.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="logona">
+           <code>
+            Logon
+           </code>
+           (
+           <code>
+            A
+           </code>
+           )
+          </h2>
+          <p>
+           <code>
+            Logon
+           </code>
+           (
+           <code>
+            A
+           </code>
+           ) must the first message sent by the client to initiate a session. If authentication succeeds, the exchange should echo the message back to the client. If authentication fails, the exchange will respond with a
+           <code>
+            LogOut
+           </code>
+           (
+           <code>
+            5
+           </code>
+           ) message with an appropriate reason.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              108
+             </td>
+             <td>
+              <code>
+               HeartBtInt
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Used to declare the timeout interval in seconds for generating heartbeats.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              96
+             </td>
+             <td>
+              <code>
+               RawData
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              data
+             </td>
+             <td>
+              timestamp and a Base64 encoded
+              <em>
+               nonce
+              </em>
+              (see below)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              553
+             </td>
+             <td>
+              <code>
+               Username
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              API Access Key. This can be obtained from the API tab on your account settings.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              554
+             </td>
+             <td>
+              <code>
+               Password
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              See below
+             </td>
+            </tr>
+            <tr>
+             <td>
+              9002
+             </td>
+             <td>
+              <code>
+               UseWordsafeTags
+              </code>
+             </td>
+             <td>
+              Boolean
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              If present and set to
+              <code>
+               Y
+              </code>
+              , all of the tag values for our custom tags start at 5000 instead of 100000. This can be used for FIX libraries that don't allow higher tag numbers. This will setting will apply for the remainder of the connection. For example,
+              <code>
+               Volume24h
+              </code>
+              (
+              <code>
+               100087
+              </code>
+              ) would become
+              <code>
+               5078
+              </code>
+              .
+             </td>
+            </tr>
+            <tr>
+             <td>
+              9001
+             </td>
+             <td>
+              <code>
+               CancelOnDisconnect
+              </code>
+             </td>
+             <td>
+              Boolean
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Boolean, to enable or disable session-level cancel on disconnect. Default - false(
+              <code>
+               N
+              </code>
+              ).
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           The
+           <code>
+            RawData
+           </code>
+           (
+           <code>
+            96
+           </code>
+           ) tag contains a timestamp and a
+           <em>
+            nonce
+           </em>
+           , separated by an ASCII period (
+           <code>
+            .
+           </code>
+           ). The
+           <em>
+            timestamp
+           </em>
+           needs to be a strictly increasing integer. We recommend using a timestamp in milliseconds. The
+           <em>
+            nonce
+           </em>
+           is composed base64-encoded randomly chosen bytes. For safety reasons, it is important that the
+           <em>
+            nonce
+           </em>
+           is sufficiently long and sourced from a cryptographically secure random number generator. We recommend at least 32 bytes, but the
+           <em>
+            nonce
+           </em>
+           can be up to 512 bytes.
+          </p>
+          <p>
+           The
+           <code>
+            Password
+           </code>
+           (
+           <code>
+            553
+           </code>
+           ) tag should contain a base64 encoded SHA256 hash of the concatenation of the
+           <code>
+            RawData
+           </code>
+           (
+           <code>
+            96
+           </code>
+           ) content and the access secret:
+           <code>
+            base64(sha256(RawData ++ access_secret))
+           </code>
+           .
+          </p>
+          <p>
+           <code>
+            CancelOnDisconnect
+           </code>
+           (
+           <code>
+            9001
+           </code>
+           ) controls "Close on Disconnect". If this tag is not provided, the default setting from the account is used.
+          </p>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           When the login is successful, the server will echo back the request.
+          </p>
+          <p>
+           If the login was not successful, the server will respond with a
+           <code>
+            Logout
+           </code>
+           (
+           <code>
+            5
+           </code>
+           ) message, and close the connection.
+          </p>
+          <h2 id="logout5">
+           <code>
+            Logout
+           </code>
+           (
+           <code>
+            5
+           </code>
+           )
+          </h2>
+          <p>
+           <code>
+            Logout
+           </code>
+           (
+           <code>
+            5
+           </code>
+           ) can be sent by either party in order to terminate a session. The sending party should always wait for the echo of the logout request before they close the socket. Closing connections in any other way is considered abnormal behaviour. Nonetheless, if
+           <code>
+            CancelOnDisconnect
+           </code>
+           (
+           <code>
+            9001
+           </code>
+           ) was set at Logon, all orders will be cancelled at Logout.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               text
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Free format text string specifying the logout reason. This is ignored by the server
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="heartbeat0">
+           <code>
+            Heartbeat
+           </code>
+           (
+           <code>
+            0
+           </code>
+           )
+          </h2>
+          <p>
+           When either end of a FIX connection has not sent or received any data for
+           <code>
+            HeartBtInt
+           </code>
+           seconds (as specified in the
+           <code>
+            Logon
+           </code>
+           (
+           <code>
+            A
+           </code>
+           ) message), it will transmit a
+           <code>
+            Heartbeat
+           </code>
+           (
+           <code>
+            0
+           </code>
+           ) message. When either end of a FIX connection has not received any data for
+           <code>
+            HeartBtInt
+           </code>
+           seconds, it will transmit a
+           <code>
+            Test Request
+           </code>
+           (
+           <code>
+            1
+           </code>
+           ) message. If there is still no response, the session should be considered lost and corrective action should be initiated.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              112
+             </td>
+             <td>
+              <code>
+               TestReqId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Varies
+             </td>
+             <td>
+              The identifier when responding to
+              <code>
+               Test Request
+              </code>
+              (
+              <code>
+               1
+              </code>
+              ) message. When not responding to a
+              <code>
+               Test Request
+              </code>
+              (
+              <code>
+               1
+              </code>
+              ) message, this tag can be left out
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           When the heartbeat has been received successfully, the server will echo back the request as confirmation.
+          </p>
+          <h2 id="test-request1">
+           <code>
+            Test Request
+           </code>
+           (
+           <code>
+            1
+           </code>
+           )
+          </h2>
+          <p>
+           The Test
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            1
+           </code>
+           ) message forces a heartbeat from the opposing application. The opposing application responds with a
+           <code>
+            Heartbeat
+           </code>
+           (
+           <code>
+            0
+           </code>
+           ) containing the
+           <code>
+            TestReqID
+           </code>
+           (
+           <code>
+            112
+           </code>
+           ).
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              112
+             </td>
+             <td>
+              <code>
+               TestReqId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Mirrors the original request ID.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="resend-request2">
+           <code>
+            Resend Request
+           </code>
+           (
+           <code>
+            2
+           </code>
+           )
+          </h2>
+          <p>
+           The Resend
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            2
+           </code>
+           ) message is used by the server to initiate the retransmission of messages. This function is utilized if a sequence number gap is detected, if the receiving application lost a message, or as a function of the initialization process.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              7
+             </td>
+             <td>
+              <code>
+               BeginSeqNo
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The first message to repeat
+             </td>
+            </tr>
+            <tr>
+             <td>
+              16
+             </td>
+             <td>
+              <code>
+               EndSeqNo
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The last message to repeat
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="reject3">
+           <code>
+            Reject
+           </code>
+           (
+           <code>
+            3
+           </code>
+           )
+          </h3>
+          <p>
+           The
+           <code>
+            Reject
+           </code>
+           (
+           <code>
+            3
+           </code>
+           ) message should be issued when a message is received but cannot be properly processed due to a session-level or data structure rule violation. An example of when a reject may be appropriate would be the receipt of a message with invalid basic data (e.g. missing tags) which successfully passes decryption.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              45
+             </td>
+             <td>
+              <code>
+               RefSeqNum
+              </code>
+             </td>
+             <td>
+              SeqNum
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              <code>
+               MsgSeqNum
+              </code>
+              (
+              <code>
+               34
+              </code>
+              ) of the rejected message
+             </td>
+            </tr>
+            <tr>
+             <td>
+              372
+             </td>
+             <td>
+              <code>
+               RefMsgType
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              The
+              <code>
+               MsgType
+              </code>
+              (
+              <code>
+               35
+              </code>
+              ) of the FIX message being referenced
+             </td>
+            </tr>
+            <tr>
+             <td>
+              373
+             </td>
+             <td>
+              <code>
+               SessionRejectReason
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Code to identity reason for rejection. See FIX specification for possible values.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Text string explaining the reason for rejection.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="security-list-requestx">
+           <code>
+            Security List Request
+           </code>
+           (
+           <code>
+            x
+           </code>
+           )
+          </h3>
+          <p>
+           The
+           <code>
+            SecurityListRequest
+           </code>
+           (
+           <code>
+            x
+           </code>
+           ) message is used to return a list of securities (instruments) from the Deribit.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              320
+             </td>
+             <td>
+              <code>
+               SecurityReqId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              A user-generated ID for this request. This can be used to match the request to the response.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              559
+             </td>
+             <td>
+              <code>
+               SecurityListRequestType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 or 4 – in any case list of instruments is returned
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           The server will respond with a Security
+           <code>
+            List
+           </code>
+           (
+           <code>
+            y
+           </code>
+           ) message, where the
+           <code>
+            SecurityReq
+           </code>
+           (
+           <code>
+            320
+           </code>
+           ) is equal to that of the request.
+          </p>
+          <h2 id="security-listy">
+           <code>
+            Security List
+           </code>
+           (
+           <code>
+            y
+           </code>
+           )
+          </h2>
+          <p>
+           The
+           <code>
+            SecurityList
+           </code>
+           (
+           <code>
+            y
+           </code>
+           ) message is used to return a list of securities that matches the criteria specified in a Security List
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            x
+           </code>
+           ).
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              320
+             </td>
+             <td>
+              <code>
+               SecurityReqId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The
+              <code>
+               SecurityReqId
+              </code>
+              (
+              <code>
+               320
+              </code>
+              ) of the request that this is a response for
+             </td>
+            </tr>
+            <tr>
+             <td>
+              322
+             </td>
+             <td>
+              <code>
+               SecurityResponseID
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Identifier for the Security
+              <code>
+               List
+              </code>
+              (
+              <code>
+               x
+              </code>
+              ) message
+             </td>
+            </tr>
+            <tr>
+             <td>
+              560
+             </td>
+             <td>
+              <code>
+               SecurityRequestResult
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 indicates a successful response. This is the only possible value in the Deribit FIX API
+             </td>
+            </tr>
+            <tr>
+             <td>
+              146
+             </td>
+             <td>
+              <code>
+               NoRelatedSym
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Specifies the number of repeating instruments specified
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Common, "human understood" representation of the security, e.g.,
+              <code>
+               BTC-28JUL17
+              </code>
+              , see instrument naming convention
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;107
+             </td>
+             <td>
+              <code>
+               SecurityDesc
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Free form security description. At the time of writing, this is either 'future' or 'option'
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;167
+             </td>
+             <td>
+              <code>
+               SecurityType
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              <code>
+               FUT
+              </code>
+              or
+              <code>
+               OPT
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;201
+             </td>
+             <td>
+              <code>
+               PutOrCall
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Used to express option right, 0 – call, 1 – put.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;202
+             </td>
+             <td>
+              <code>
+               StrikePrice
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Strike price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;947
+             </td>
+             <td>
+              <code>
+               StrikeCurrency
+              </code>
+             </td>
+             <td>
+              Currency
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Strike Currency
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;15
+             </td>
+             <td>
+              <code>
+               Currency
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Currency
+             </td>
+             <td>
+              Currency of option
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;2576
+             </td>
+             <td>
+              <code>
+               InstrumentPricePrecision
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              number of decimal places for instrument prices (usually 4 for options, 2 for futures)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;225
+             </td>
+             <td>
+              <code>
+               IssueDate
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Date instrument was issued.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;541
+             </td>
+             <td>
+              <code>
+               MaturityDate
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Expiration date,
+              <code>
+               YYYYMMDD
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;1079
+             </td>
+             <td>
+              <code>
+               MaturityTime
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Expiration time
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;562
+             </td>
+             <td>
+              <code>
+               MinTradeVol
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              The minimum trading volume for a security
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;63
+             </td>
+             <td>
+              <code>
+               SettlType
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Indicates order settlement period. E.g.,
+              <code>
+               M1
+              </code>
+              – month,
+              <code>
+               W1
+              </code>
+              – week,
+              <code>
+               W2
+              </code>
+              – 2 weeks etc
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;120
+             </td>
+             <td>
+              <code>
+               SettlCurrency
+              </code>
+             </td>
+             <td>
+              Currency
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Currency code of settlement denomination.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;479
+             </td>
+             <td>
+              <code>
+               CommCurrency
+              </code>
+             </td>
+             <td>
+              Currency
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Specifies currency to be use for Commission.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="market-data-requestv">
+           <code>
+            Market Data Request
+           </code>
+           (
+           <code>
+            V
+           </code>
+           )
+          </h3>
+          <p>
+           <code>
+            Market Data Request
+           </code>
+           (
+           <code>
+            V
+           </code>
+           ) can be used to request market data in snapshot or the incremental form. Deribit uses his message for order book requests and its change notification.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Instrument symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              262
+             </td>
+             <td>
+              <code>
+               MdReqId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Unique ID assigned to this request.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              263
+             </td>
+             <td>
+              <code>
+               SubscriptionRequestType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 = Snapshot, 1 = Snapshot + Subscribe, 2 = Unsubscribe
+             </td>
+            </tr>
+            <tr>
+             <td>
+              264
+             </td>
+             <td>
+              <code>
+               MarketDepth
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Default 20
+             </td>
+            </tr>
+            <tr>
+             <td>
+              265
+             </td>
+             <td>
+              <code>
+               MDUpdateType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              when
+              <code>
+               SubscriptionRequestType=1
+              </code>
+             </td>
+             <td>
+              The type of update to subscribe to.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100007
+             </td>
+             <td>
+              <code>
+               DeribitTradeAmount
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Amount of trades returned in the snapshot response to request for snapshot of recent trades, default 20, maximum 1000
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100008
+             </td>
+             <td>
+              <code>
+               DeribitSinceTimestamp
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              UTC Timestamp in milliseconds (integer number of milliseconds), if specified, the response returns the trades happened since that timestamp, applicable to the request for recent trades snapshot
+             </td>
+            </tr>
+            <tr>
+             <td>
+             </td>
+             <td>
+              Group
+              <code>
+               MDEntryTypes
+              </code>
+             </td>
+             <td>
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              267
+             </td>
+             <td>
+              <code>
+               NoMdEntryTypes
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Number of entry types in the request.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;269
+             </td>
+             <td>
+              <code>
+               MDEntryType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 = Bid (Bid side of the order book), 1 = Offer (Ask side of the order book), 2 = Trade (Info about recent trades)
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           When requesting a subscription (
+           <code>
+            SubscriptionRequestType
+           </code>
+           =1), the only supported combinations are:
+          </p>
+          <ul>
+           <li>
+            <code>
+             MDUpdateType
+            </code>
+            =1,
+            <code>
+             MarketDepth
+            </code>
+            =0. This will result a snapshot message (W) with the whole order book, followed by incremental updates (X messages) through the whole order book depth.
+           </li>
+           <li>
+            <code>
+             MDUpdateType
+            </code>
+            =0,
+            <code>
+             MarketDepth
+            </code>
+            =(1,10,20). This results in full refresh (W) messages, containing the entire specified order book depth. Valid values for
+            <code>
+             MarketDepth
+            </code>
+            are 1, 10, 20.
+           </li>
+          </ul>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           If the server is unable to supply the requested data, it will respond with a Market Data Request
+           <code>
+            Reject
+           </code>
+           (
+           <code>
+            Y
+           </code>
+           ) message.
+          </p>
+          <p>
+           If the request called for a snapshot (i.e.
+           <code>
+            SubscriptionRequestType
+           </code>
+           (
+           <code>
+            263
+           </code>
+           )=0 or
+           <code>
+            SubscriptionRequestType
+           </code>
+           (
+           <code>
+            263
+           </code>
+           )=1), the server will respond with a Market Data - Snapshot/Full
+           <code>
+            Refresh
+           </code>
+           (
+           <code>
+            W
+           </code>
+           ) message.
+          </p>
+          <p>
+           If the request called for a snapshot (i.e.
+           <code>
+            SubscriptionRequestType
+           </code>
+           (
+           <code>
+            263
+           </code>
+           )=0 or
+           <code>
+            SubscriptionRequestType
+           </code>
+           (
+           <code>
+            263
+           </code>
+           )=1), the server will start sending with a Market Data - Incremental
+           <code>
+            Refresh
+           </code>
+           (
+           <code>
+            X
+           </code>
+           ) messages.
+          </p>
+          <h2 id="market-data-request-rejecty">
+           <code>
+            Market Data Request Reject
+           </code>
+           (
+           <code>
+            Y
+           </code>
+           )
+          </h2>
+          <p>
+           If a Market Data
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            V
+           </code>
+           ) message is not accepted, the exchange responds with a Market Data Request
+           <code>
+            Reject
+           </code>
+           (
+           <code>
+            Y
+           </code>
+           ) message
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Free format text string
+             </td>
+            </tr>
+            <tr>
+             <td>
+              262
+             </td>
+             <td>
+              <code>
+               MDReqID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              ID of the original request
+             </td>
+            </tr>
+            <tr>
+             <td>
+              281
+             </td>
+             <td>
+              <code>
+               MDReqRejReason
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              Yes
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="market-data-snapshotfull-refreshw">
+           <code>
+            Market Data Snapshot/Full Refresh
+           </code>
+           (
+           <code>
+            W
+           </code>
+           )
+          </h2>
+          <p>
+           Market Data Snapshot/Full
+           <code>
+            Refresh
+           </code>
+           (
+           <code>
+            W
+           </code>
+           ) is used as the response to a Market Data
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            V
+           </code>
+           ) message.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Instrument symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              262
+             </td>
+             <td>
+              <code>
+               MDReqID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              ID of the original request, if it is applicable
+             </td>
+            </tr>
+            <tr>
+             <td>
+              311
+             </td>
+             <td>
+              <code>
+               UnderlyingSymbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              For options
+             </td>
+             <td>
+              Underlying symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              810
+             </td>
+             <td>
+              <code>
+               UnderlyingPx
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              For options
+             </td>
+             <td>
+              Price of the underlying instrument
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100087
+             </td>
+             <td>
+              <code>
+               TradeVolume24h
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Defines 24h trade volume for the Symbol in the corresponding contract units
+             </td>
+            </tr>
+            <tr>
+             <td>
+              268
+             </td>
+             <td>
+              <code>
+               NoMDEntries
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Repeating group . Specifies the number of entries in the group.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;279
+             </td>
+             <td>
+              <code>
+               MDUpdateAction
+              </code>
+             </td>
+             <td>
+              Char
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Type of Market Data update action. 0 = New, 1 = Change, 2 = Delete
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;269
+             </td>
+             <td>
+              <code>
+               MDEntryType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              0 = Bid (Bid side of the order book), 1 = Offer (Ask side of the order book), 2 = Trade (in case of request for info about recent trades)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;270
+             </td>
+             <td>
+              <code>
+               MDEntryPx
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Price of an entry
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;271
+             </td>
+             <td>
+              <code>
+               MDEntrySize
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Size of an entry
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;272
+             </td>
+             <td>
+              <code>
+               MDEntryDate
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Timestamp for trade
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;100009
+             </td>
+             <td>
+              <code>
+               DeribitTradeId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Id of the trade, in case of the request for trades
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Side of trade (1 = Buy, 2 = Sell)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Side of trade (1 = Buy, 2 = Sell)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              The trade sequence number
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;198
+             </td>
+             <td>
+              <code>
+               SecondaryOrderId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              For trade – matching order id
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;39
+             </td>
+             <td>
+              <code>
+               OrdStatus
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              For trade – order status (0 = New, 1 = Partially filled, 2 = Filled, 4 = Cancelled)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;100010
+             </td>
+             <td>
+              <code>
+               DeribitLabel
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              User defined 32 character label of the order, in case of the request for trades
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="market-data-incremental-refreshx">
+           <code>
+            Market Data Incremental Refresh
+           </code>
+           (
+           <code>
+            x
+           </code>
+           )
+          </h2>
+          <p>
+           Market Data – Incremental
+           <code>
+            Refresh
+           </code>
+           (
+           <code>
+            X
+           </code>
+           ) message is used for incremental updates in case of Market Data
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            V
+           </code>
+           ) for Snapshot + Subscribe
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Instrument symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              262
+             </td>
+             <td>
+              <code>
+               MDReqID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              ID of the original request, if it is applicable
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100087
+             </td>
+             <td>
+              <code>
+               TradeVolume24h
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Defines 24h trade volume for the Symbol in the corresponding contract units
+             </td>
+            </tr>
+            <tr>
+             <td>
+              268
+             </td>
+             <td>
+              <code>
+               NoMDEntries
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Repeating group . Specifies the number of entries in the group.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;269
+             </td>
+             <td>
+              <code>
+               MDEntryType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              0 = Bid (Bid side of the order book), 1 = Offer (Ask side of the order book), 2 = Trade (in case of request for info about recent trades)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;270
+             </td>
+             <td>
+              <code>
+               MDEntryPx
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Price of an entry
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;271
+             </td>
+             <td>
+              <code>
+               MDEntrySize
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Size of an entry
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;272
+             </td>
+             <td>
+              <code>
+               MDEntryDate
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              Timestamp for trade
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;100009
+             </td>
+             <td>
+              <code>
+               DeribitTradeId
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Id of the trade, in case of the request for trades
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Side of trade (1 = Buy, 2 = Sell)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;37
+             </td>
+             <td>
+              <code>
+               OrderId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              For trade – order id
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;198
+             </td>
+             <td>
+              <code>
+               SecondaryOrderId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              For trade – matching order id
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;39
+             </td>
+             <td>
+              <code>
+               OrdStatus
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              For trade – order status (0 = New, 1 = Partially filled, 2 = Filled, 4 = Cancelled)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;100010
+             </td>
+             <td>
+              <code>
+               DeribitLabel
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              User defined 32 character label of the order, in case of the request for trades
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;44
+             </td>
+             <td>
+              <code>
+               IndexPrice
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              For trades, this is the index price at the trade moment (Deribit index).
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="new-order-singled">
+           <code>
+            New Order Single
+           </code>
+           (
+           <code>
+            D
+           </code>
+           )
+          </h2>
+          <p>
+           The NEW ORDER
+           <code>
+            SINGLE
+           </code>
+           (
+           <code>
+            D
+           </code>
+           ) is used by the client to submit new orders to the exchange. Note Deribit doesn't store client identifiers (for the sake of speed of execution), i.e., client software should manage matching client-server identifiers using.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Unique identifier for the order as assigned by the client
+             </td>
+            </tr>
+            <tr>
+             <td>
+              54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              1 = Buy, 2 = Sell
+             </td>
+            </tr>
+            <tr>
+             <td>
+              38
+             </td>
+             <td>
+              <code>
+               OrderQty
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order quantity
+             </td>
+            </tr>
+            <tr>
+             <td>
+              44
+             </td>
+             <td>
+              <code>
+               Price
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Instrument symbol, e.g.,
+              <code>
+               BTC-1JAN16
+              </code>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              18
+             </td>
+             <td>
+              <code>
+               ExecInst
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Currently is used to place POST ONLY orders: 6 = "Participate don't initiate"
+             </td>
+            </tr>
+            <tr>
+             <td>
+              40
+             </td>
+             <td>
+              <code>
+               OrdType
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Order type. Valid values: 1 = Market, 2 = Limit. (default Limit)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              59
+             </td>
+             <td>
+              <code>
+               TimeInForce
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Specifies how long the order remains in effect. Absence of this field is interpreted as "Good Till Cancel". Valid values: 1 = Good Till Cancel (
+              <code>
+               GTC
+              </code>
+              ), 3 = Immediate or Cancel (
+              <code>
+               IOC
+              </code>
+              ), 4 = Fill or Kill (
+              <code>
+               FOK
+              </code>
+              )
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100010
+             </td>
+             <td>
+              <code>
+               DeribitLabel
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              no
+             </td>
+             <td>
+              A custom label for your order, max 32 characters.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           Upon receiving a new order, the exchange responds with the Execution
+           <code>
+            Report
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ) message communicating whether the order was accepted or rejected.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Deribit replaces this field with the own value assigned by the server (it is not the client id from New Order Single)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              41
+             </td>
+             <td>
+              <code>
+               OrigClOrdId
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The original value assigned by the client in the
+              <code>
+               New Order Single
+              </code>
+              (
+              <code>
+               D
+              </code>
+              ) message
+             </td>
+            </tr>
+            <tr>
+             <td>
+              39
+             </td>
+             <td>
+              <code>
+               OrdStatus
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              0 = New, 8 = Rejected
+             </td>
+            </tr>
+            <tr>
+             <td>
+              54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              1 = Buy, 2 = Sell
+             </td>
+            </tr>
+            <tr>
+             <td>
+              60
+             </td>
+             <td>
+              <code>
+               TransactTime
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Time the transaction represented by this Execution Report occurred. Fix timestamp.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              151
+             </td>
+             <td>
+              <code>
+               LeavesQty
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order quantity open for further execution (
+              <code>
+               LeavesQty
+              </code>
+              =
+              <code>
+               OrderQty
+              </code>
+              -
+              <code>
+               CumQty
+              </code>
+              )
+             </td>
+            </tr>
+            <tr>
+             <td>
+              14
+             </td>
+             <td>
+              <code>
+               CumQty
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Total executed quantity or 0.0
+             </td>
+            </tr>
+            <tr>
+             <td>
+              38
+             </td>
+             <td>
+              <code>
+               OrderQty
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order quantity
+             </td>
+            </tr>
+            <tr>
+             <td>
+              40
+             </td>
+             <td>
+              <code>
+               OrdType
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              2 = Limit, Limit orders only
+             </td>
+            </tr>
+            <tr>
+             <td>
+              44
+             </td>
+             <td>
+              <code>
+               Price
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              103
+             </td>
+             <td>
+              <code>
+               OrdRejReason
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Free format text string, usually exceptions
+             </td>
+            </tr>
+            <tr>
+             <td>
+              207
+             </td>
+             <td>
+              <code>
+               SecurityExchange
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              "Deribit"
+             </td>
+            </tr>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Instrument symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              6
+             </td>
+             <td>
+              <code>
+               AvgPx
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Average execution price or 0.0 if not executed yet or rejected
+             </td>
+            </tr>
+            <tr>
+             <td>
+              1362
+             </td>
+             <td>
+              <code>
+               NoFills
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Number of immediate fill entries for the order
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;1363
+             </td>
+             <td>
+              <code>
+               FillExecID
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Unique identifier of execution, concatenated via '#' symbol and trade sequence number, e.g.,
+              <code>
+               BTC-28SEP18#38
+              </code>
+              .
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;1364
+             </td>
+             <td>
+              <code>
+               FillPx
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Price of this partial fill
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;1365
+             </td>
+             <td>
+              <code>
+               FillQty
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Quantity bought/sold on this partial fill
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="order-cancel-requestf">
+           <code>
+            Order Cancel Request
+           </code>
+           (
+           <code>
+            F
+           </code>
+           )
+          </h2>
+          <p>
+           This message requests the cancellation of a particular order. If an order has been partially filled, only the remaining quantity can be cancelled. The request should be accepted only if an order can successfully be cancelled without executing further. The server generated identifiers should be used as
+           <code>
+            OrigClOrdId
+           </code>
+           , Deribit doesn't store client identifiers.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order identifier
+             </td>
+            </tr>
+            <tr>
+             <td>
+              41
+             </td>
+             <td>
+              <code>
+               OrigClOrdId
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order identifier assigned by Deribit
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response-on-failure">
+           Response on failure
+          </h3>
+          <p>
+           <code>
+            Order Cancel Reject
+           </code>
+           (
+           <code>
+            9
+           </code>
+           ) is issued by the exchange upon receipt of Order Cancel
+           <code>
+            Request
+           </code>
+           (
+           <code>
+            F
+           </code>
+           ) message which cannot be executed.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              52
+             </td>
+             <td>
+              <code>
+               SendingTime
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order identifier
+             </td>
+            </tr>
+            <tr>
+             <td>
+              41
+             </td>
+             <td>
+              <code>
+               OrigClOrdId
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order identifier assigned by Deribit
+             </td>
+            </tr>
+            <tr>
+             <td>
+              39
+             </td>
+             <td>
+              <code>
+               OrdStatus
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              If it is applicable
+             </td>
+            </tr>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Text string explaining the reason for rejection
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response-on-success">
+           Response on success
+          </h3>
+          <p>
+           The following
+           <code>
+            Execution Report
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ) is sent by the exchange upon successfully processing a cancel request.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              52
+             </td>
+             <td>
+              <code>
+               SendingTime
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Deribit replaces this field with the own value assigned by the server (it is not the client id from New Order Single)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              41
+             </td>
+             <td>
+              <code>
+               OrigClOrdId
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The original value assigned by the client in the
+              <code>
+               New Order Single
+              </code>
+              (
+              <code>
+               D
+              </code>
+              ) message
+             </td>
+            </tr>
+            <tr>
+             <td>
+              39
+             </td>
+             <td>
+              <code>
+               OrdStatus
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 = New, 1 = Partial, 4 = Cancelled, 8 = Rejected
+             </td>
+            </tr>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Text string describing the result
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="order-mass-cancel-requestq">
+           <code>
+            Order Mass Cancel Request
+           </code>
+           (
+           <code>
+            q
+           </code>
+           )
+          </h2>
+          <p>
+           <code>
+            Order Mass Cancel Request
+           </code>
+           (
+           <code>
+            q
+           </code>
+           ) message will trigger cancellation of a group of orders.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              Y
+             </td>
+             <td>
+              Unique ID of Order Mass Cancel Request (q) as assigned by the client.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              530
+             </td>
+             <td>
+              <code>
+               MassCancelRequestType
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Specifies the type of cancellation requested. Supported values: 7 (all orders), 5 (orders by security type), 1 (orders by symbol).
+             </td>
+            </tr>
+            <tr>
+             <td>
+              167
+             </td>
+             <td>
+              <code>
+               SecurityType
+              </code>
+             </td>
+             <td>
+              If
+              <code>
+               MassCancelRequestType
+              </code>
+              =5
+             </td>
+             <td>
+              possible values 'FUT', 'OPT'. The security type for which to cancel orders.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              If
+              <code>
+               MassCancelRequestType
+              </code>
+              =1
+             </td>
+             <td>
+              The symbols for which to cancel all orders
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           After the cancellation, the server responds with a
+           <code>
+            Order Mass Cancel Report
+           </code>
+           (
+           <code>
+            r
+           </code>
+           ).
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Deribit replaces this field with the own value assigned by the server (it is not the client id from New Order Single)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              530
+             </td>
+             <td>
+              <code>
+               MassCancelRequestType
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Specifies the type of cancellation requested. Supported values: 1 (all orders), 5 (orders by security type), 7 (orders by symbol).
+             </td>
+            </tr>
+            <tr>
+             <td>
+              531
+             </td>
+             <td>
+              <code>
+               MassCancelResponse
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              If successful, echoes the
+              <code>
+               MassCancelRequestType
+              </code>
+              .
+             </td>
+            </tr>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              'success', if deletion was successful
+             </td>
+            </tr>
+            <tr>
+             <td>
+              532
+             </td>
+             <td>
+              <code>
+               MassCancelRejectReason
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Reason why deletion failed. 1=Unknown security, 5=Unknown security type
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="order-mass-status-requestaf">
+           <code>
+            Order Mass Status Request
+           </code>
+           (
+           <code>
+            AF
+           </code>
+           )
+          </h2>
+          <p>
+           <code>
+            Order Mass Status Request
+           </code>
+           (
+           <code>
+            AF
+           </code>
+           ) message requests the status of currently open orders. The exchange should respond with a series of Execution
+           <code>
+            Report
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ) messages detailing orders.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              584
+             </td>
+             <td>
+              <code>
+               MassStatusReqID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Client-assigned unique ID of this request
+             </td>
+            </tr>
+            <tr>
+             <td>
+              585
+             </td>
+             <td>
+              <code>
+               MassStatusReqType
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Specifies the scope of the mass status request. (see below)
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           This message can be used in two ways: to request status of all your open orders, or to request the status of a single order (which needn't be open).
+          </p>
+          <p>
+           To request the status of all orders, choose a random
+           <code>
+            MassStatusRequestId
+           </code>
+           , and set
+           <code>
+            MassStatusReqType=7
+           </code>
+           . The server will respond with a series of
+           <code>
+            Execution Reports
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ) messages, where the first message contains
+           <code>
+            MassStatusReqType=7
+           </code>
+           and
+           <code>
+            TotNumReports
+           </code>
+           will be set to the number of reports to be expected as a follow-up.
+          </p>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           When the client requests the status of current orders, the exchange should reply with a series of special
+           <code>
+            Execution Reports
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ), one for every order requested.
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdID
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Deribit replaces this field with the own value assigned by the server (it is not the client id from New Order Single)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              41
+             </td>
+             <td>
+              <code>
+               OrigClOrdId
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              For Order Mass Status
+              <code>
+               Request
+              </code>
+              (
+              <code>
+               AF
+              </code>
+              ),
+              <code>
+               OrigClOrdId
+              </code>
+              is equal to the
+              <code>
+               ClOrdID
+              </code>
+              , i.e., order identifier assigned by Deribit
+             </td>
+            </tr>
+            <tr>
+             <td>
+              39
+             </td>
+             <td>
+              <code>
+               OrdStatus
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 = New, 1 = Partial, 2 = Filled, 3 = Done, 4 = Cancelled, 8 = Rejected
+             </td>
+            </tr>
+            <tr>
+             <td>
+              54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              1 = Buy, 2 = Sell
+             </td>
+            </tr>
+            <tr>
+             <td>
+              60
+             </td>
+             <td>
+              <code>
+               TransactTime
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Time the transaction represented by this Execution Report occurred.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              38
+             </td>
+             <td>
+              <code>
+               OrderQty
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Order quantity
+             </td>
+            </tr>
+            <tr>
+             <td>
+              40
+             </td>
+             <td>
+              <code>
+               OrdType
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              2 = Limit, Limit orders only
+             </td>
+            </tr>
+            <tr>
+             <td>
+              44
+             </td>
+             <td>
+              <code>
+               Price
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              103
+             </td>
+             <td>
+              <code>
+               OrdRejReason
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              See fix specification for possible values
+             </td>
+            </tr>
+            <tr>
+             <td>
+              58
+             </td>
+             <td>
+              <code>
+               Text
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Free format text string, usually exceptions
+             </td>
+            </tr>
+            <tr>
+             <td>
+              207
+             </td>
+             <td>
+              <code>
+               SecurityExchange
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              "Deribit"
+             </td>
+            </tr>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Instrument symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              6
+             </td>
+             <td>
+              <code>
+               AvgPx
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Average execution price, filled.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <p>
+           When responding to a
+           <code>
+            MassStatusReqType=7
+           </code>
+           request, the server precedes the
+           <code>
+            Execution Reports
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ) messages with a special
+           <code>
+            Execution Reports
+           </code>
+           (
+           <code>
+            8
+           </code>
+           ) message:
+          </p>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              584
+             </td>
+             <td>
+              <code>
+               MassStatusReqID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The
+              <code>
+               MassStatusReqID
+              </code>
+              from the request. (Only for the first message response to a
+              <code>
+               MassStatusReqType=7
+              </code>
+              request.)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              585
+             </td>
+             <td>
+              <code>
+               MassStatusReqType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The
+              <code>
+               MassStatusReqType
+              </code>
+              from the request. (Only for the first message response to a
+              <code>
+               MassStatusReqType=7
+              </code>
+              request.)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              911
+             </td>
+             <td>
+              <code>
+               TotNumReports
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The total number of reports following this initial report
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="request-for-positionsan">
+           <code>
+            Request For Positions
+           </code>
+           (
+           <code>
+            AN
+           </code>
+           )
+          </h3>
+          <p>
+           Request For
+           <code>
+            Positions
+           </code>
+           (
+           <code>
+            AN
+           </code>
+           ) is used by the owner of a position to request a Position Report.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              710
+             </td>
+             <td>
+              <code>
+               PosReqID
+              </code>
+             </td>
+             <td>
+              string
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Unique identifier for the Request for
+              <code>
+               Positions
+              </code>
+              (
+              <code>
+               AN
+              </code>
+              ) as assigned by the submitter.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              724
+             </td>
+             <td>
+              <code>
+               PosReqType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              0 = Positions (currently)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              263
+             </td>
+             <td>
+              <code>
+               SubscriptionRequestType
+              </code>
+             </td>
+             <td>
+              int
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              0=Receive snapshot, 1=subscribe, 2=unsubscribe
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           The server will respond with a Position
+           <code>
+            Report
+           </code>
+           (
+           <code>
+            AP
+           </code>
+           ) message.
+          </p>
+          <h2 id="position-reportap">
+           <code>
+            Position Report
+           </code>
+           (
+           <code>
+            AP
+           </code>
+           )
+          </h2>
+          <p>
+           The Position
+           <code>
+            Report
+           </code>
+           (
+           <code>
+            AP
+           </code>
+           ) message is returned by the holder of a position in response to a Request for
+           <code>
+            Position
+           </code>
+           (
+           <code>
+            AN
+           </code>
+           ) message.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              721
+             </td>
+             <td>
+              <code>
+               PosMaintRptID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Unique identifier for this position report
+             </td>
+            </tr>
+            <tr>
+             <td>
+              710
+             </td>
+             <td>
+              <code>
+               PosReqID
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Unique identifier for the Request for Positions associated with this report.
+             </td>
+            </tr>
+            <tr>
+             <td>
+              724
+             </td>
+             <td>
+              <code>
+               PosReqType
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              0 = Positions (currently)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              728
+             </td>
+             <td>
+              <code>
+               PosReqResult
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              0 = success, 1 = unsupported request for positions
+             </td>
+            </tr>
+            <tr>
+             <td>
+              702
+             </td>
+             <td>
+              <code>
+               NoPositions
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Number of position entries following
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;704
+             </td>
+             <td>
+              <code>
+               LongQty
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Qty for long position (0 for short position)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;705
+             </td>
+             <td>
+              <code>
+               ShortQty
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Qty for short position (0 for long position)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Instrument symbol
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;883
+             </td>
+             <td>
+              <code>
+               UnderlyingEndPrice
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Mark price (reference price)
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              1 = Buy, 2 = Sell
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;730
+             </td>
+             <td>
+              <code>
+               SettlPrice
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Average price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;96
+             </td>
+             <td>
+              <code>
+               RawData
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Additional info, semi-colon separated: maintenance margin;initial margin;floating P/L
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;100088
+             </td>
+             <td>
+              <code>
+               DeribitLiquidationPrice
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Estimated liquidation price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              =&gt;100089
+             </td>
+             <td>
+              <code>
+               DeribitBTCSize
+              </code>
+             </td>
+             <td>
+              No
+             </td>
+             <td>
+              Size in BTC
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="user-requestbe">
+           <code>
+            User Request
+           </code>
+           (
+           <code>
+            BE
+           </code>
+           )
+          </h2>
+          <p>
+           This message is used to request a report on a user's status and user account info.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              923
+             </td>
+             <td>
+              <code>
+               UserRequestID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The request ID
+             </td>
+            </tr>
+            <tr>
+             <td>
+              924
+             </td>
+             <td>
+              <code>
+               UserRequestType
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              Should be equal to 4 (Request individual user status), only
+              <code>
+               UserRequestType=4
+              </code>
+              supported for now
+             </td>
+            </tr>
+            <tr>
+             <td>
+              553
+             </td>
+             <td>
+              <code>
+               Username
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              API authenticated 'Access Key', user can request only own info, should be the same as for previous
+              <code>
+               LOGON
+              </code>
+              (
+              <code>
+               A
+              </code>
+              )
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h3 id="response">
+           Response
+          </h3>
+          <p>
+           The server will respond with a User
+           <code>
+            Response
+           </code>
+           (
+           <code>
+            BF
+           </code>
+           ) message.
+          </p>
+          <h2 id="user-responsebf">
+           <code>
+            User Response
+           </code>
+           (
+           <code>
+            BF
+           </code>
+           )
+          </h2>
+          <p>
+           This message is used to respond to a
+           <code>
+            USER REQUEST
+           </code>
+           (
+           <code>
+            BE
+           </code>
+           ) message, it reports the status of the user and user's account info.
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              923
+             </td>
+             <td>
+              <code>
+               UserRequestID
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              The request ID
+             </td>
+            </tr>
+            <tr>
+             <td>
+              553
+             </td>
+             <td>
+              <code>
+               Username
+              </code>
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              User's API 'Access Key'
+             </td>
+            </tr>
+            <tr>
+             <td>
+              926
+             </td>
+             <td>
+              <code>
+               UserStatus
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              1 = logged in, current implementation accepts USER REQUEST-s only from logged in users
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100001
+             </td>
+             <td>
+              <code>
+               DeribitUserEquity
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Equity of the user
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100002
+             </td>
+             <td>
+              <code>
+               DeribitUserBalance
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Balance of the user
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100003
+             </td>
+             <td>
+              <code>
+               DeribitUserInitialMargin
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Initial margin of the user
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100004
+             </td>
+             <td>
+              <code>
+               DeribitUserMaintenanceMargin
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Maintenance margin of the user
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100005
+             </td>
+             <td>
+              <code>
+               DeribitUnrealizedPl
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Unrealized P/L of the user
+             </td>
+            </tr>
+            <tr>
+             <td>
+              100006
+             </td>
+             <td>
+              <code>
+               DeribitRealizedPl
+              </code>
+             </td>
+             <td>
+              N
+             </td>
+             <td>
+              Realized P/L of the user
+             </td>
+            </tr>
+           </tbody>
+          </table>
+          <h2 id="order-cancelreplace-requestg">
+           <code>
+            Order Cancel/Replace Request
+           </code>
+           (
+           <code>
+            G
+           </code>
+           )
+          </h2>
+          <p>
+           To change/edit the parameters of an existing order
+          </p>
+          <h3 id="arguments">
+           Arguments
+          </h3>
+          <table>
+           <thead>
+            <tr>
+             <th>
+              Tag
+             </th>
+             <th>
+              Name
+             </th>
+             <th>
+              Type
+             </th>
+             <th>
+              Required
+             </th>
+             <th>
+              Comments
+             </th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr>
+             <td>
+              41
+             </td>
+             <td>
+              <code>
+               OrigClOrdID
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              11
+             </td>
+             <td>
+              <code>
+               ClOrdId
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              60
+             </td>
+             <td>
+              <code>
+               TransactTime
+              </code>
+             </td>
+             <td>
+              UTCTimestamp
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+             </td>
+            </tr>
+            <tr>
+             <td>
+              54
+             </td>
+             <td>
+              <code>
+               Side
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              original side, 1=buy, 2=sell
+             </td>
+            </tr>
+            <tr>
+             <td>
+              38
+             </td>
+             <td>
+              <code>
+               OrderQty
+              </code>
+             </td>
+             <td>
+              Qty
+             </td>
+             <td>
+             </td>
+             <td>
+              order quantity
+             </td>
+            </tr>
+            <tr>
+             <td>
+              40
+             </td>
+             <td>
+              <code>
+               OrdType
+              </code>
+             </td>
+             <td>
+              char
+             </td>
+             <td>
+              Yes
+             </td>
+             <td>
+              currently 2 - 'limit'
+             </td>
+            </tr>
+            <tr>
+             <td>
+              44
+             </td>
+             <td>
+              <code>
+               Price
+              </code>
+             </td>
+             <td>
+              Price
+             </td>
+             <td>
+             </td>
+             <td>
+              order price
+             </td>
+            </tr>
+            <tr>
+             <td>
+              55
+             </td>
+             <td>
+              <code>
+               Symbol
+              </code>
+             </td>
+             <td>
+              String
+             </td>
+             <td>
+             </td>
+             <td>
+              instrument name, while not required, the server will be able to respond faster if it is supplied.
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </section>
+        </div>
+        <div class="search-results">
+         <div class="has-results">
+          <h1 class="search-results-title">
+           <span class="search-results-count">
+           </span>
+           results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+          <ul class="search-results-list">
+          </ul>
+         </div>
+         <div class="no-results">
+          <h1 class="search-results-title">
+           No results matching "
+           <span class="search-query">
+           </span>
+           "
+          </h1>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script>
+    var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"FIX API","level":"3.1","depth":1,"next":{"title":"Messages","level":"3.2","depth":1,"ref":"","articles":[{"title":"Logon(A)","level":"3.2.1","depth":2,"anchor":"#logona","path":"api-fix.md","ref":"api-fix.md#logona","articles":[]},{"title":"Logout(5)","level":"3.2.2","depth":2,"anchor":"#logout5","path":"api-fix.md","ref":"api-fix.md#logout5","articles":[]},{"title":"Heartbeat(0)","level":"3.2.3","depth":2,"anchor":"#heartbeat0","path":"api-fix.md","ref":"api-fix.md#heartbeat0","articles":[]},{"title":"Test Request(1)","level":"3.2.4","depth":2,"anchor":"#test-request1","path":"api-fix.md","ref":"api-fix.md#test-request1","articles":[]},{"title":"Resend Request(2)","level":"3.2.5","depth":2,"anchor":"#resend-request2","path":"api-fix.md","ref":"api-fix.md#resend-request2","articles":[]},{"title":"Reject(3)","level":"3.2.6","depth":2,"anchor":"#reject3","path":"api-fix.md","ref":"api-fix.md#reject3","articles":[]},{"title":"Security List Request(x)","level":"3.2.7","depth":2,"anchor":"#security-list-requestx","path":"api-fix.md","ref":"api-fix.md#security-list-requestx","articles":[]},{"title":"Security List(y)","level":"3.2.8","depth":2,"anchor":"#security-listy","path":"api-fix.md","ref":"api-fix.md#security-listy","articles":[]},{"title":"Market Data Request(v)","level":"3.2.9","depth":2,"anchor":"#market-data-requestv","path":"api-fix.md","ref":"api-fix.md#market-data-requestv","articles":[]},{"title":"Market Data Request Reject(Y)","level":"3.2.10","depth":2,"anchor":"#market-data-request-rejecty","path":"api-fix.md","ref":"api-fix.md#market-data-request-rejecty","articles":[]},{"title":"Market Data Snapshot/Full Refresh(W)","level":"3.2.11","depth":2,"anchor":"#market-data-snapshotfull-refreshw","path":"api-fix.md","ref":"api-fix.md#market-data-snapshotfull-refreshw","articles":[]},{"title":"Market Data Incremental Refresh(x)","level":"3.2.12","depth":2,"anchor":"#market-data-incremental-refreshx","path":"api-fix.md","ref":"api-fix.md#market-data-incremental-refreshx","articles":[]},{"title":"New Order Single(D)","level":"3.2.13","depth":2,"anchor":"#new-order-singled","path":"api-fix.md","ref":"api-fix.md#new-order-singled","articles":[]},{"title":"Order Cancel Request(F)","level":"3.2.14","depth":2,"anchor":"#order-cancel-requestf","path":"api-fix.md","ref":"api-fix.md#order-cancel-requestf","articles":[]},{"title":"Order Mass Status Request(AF)","level":"3.2.15","depth":2,"anchor":"#order-mass-status-requestaf","path":"api-fix.md","ref":"api-fix.md#order-mass-status-requestaf","articles":[]},{"title":"Request For Positions(AN)","level":"3.2.16","depth":2,"anchor":"#request-for-positionsan","path":"api-fix.md","ref":"api-fix.md#request-for-positionsan","articles":[]},{"title":"Position Report(AP)","level":"3.2.17","depth":2,"anchor":"#position-reportap","path":"api-fix.md","ref":"api-fix.md#position-reportap","articles":[]},{"title":"User Request(BE)","level":"3.2.18","depth":2,"anchor":"#user-requestbe","path":"api-fix.md","ref":"api-fix.md#user-requestbe","articles":[]},{"title":"User Response(BF)","level":"3.2.19","depth":2,"anchor":"#user-responsebf","path":"api-fix.md","ref":"api-fix.md#user-responsebf","articles":[]},{"title":"Order Cancel/Replace Request(G)","level":"3.2.20","depth":2,"anchor":"#order-cancelreplace-requestg","path":"api-fix.md","ref":"api-fix.md#order-cancelreplace-requestg","articles":[]}]},"previous":{"title":"unsubscribe","level":"2.3.20","depth":2,"anchor":"#unsubscribe","path":"rpc-endpoints.md","ref":"rpc-endpoints.md#unsubscribe","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[{"lang":"js","name":"JavaScript","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"api-fix.md","mtime":"2018-11-15T19:04:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T19:06:15.159Z"},"basePath":".","book":{"language":""}});
+        });
+   </script>
+  </div>
+  <script src="./../assets/deribit-fix_files/gitbook.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/theme.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/search-engine.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/search.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/lunr.min.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/search-lunr.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/buttons.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/fontsettings.js">
+  </script>
+  <script src="./../assets/deribit-fix_files/theme-api.js">
+  </script>
+ </body>
+</html>
